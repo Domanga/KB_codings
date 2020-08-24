@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = Number((prompt)('1. 숫자를 입력하세요', '1'));
+        var b = Number((prompt)('2. 숫자를 입력하세요', '1'));
+
+        var first, second, third, result;
+        first = a * (b%10);
+        second = a * (Math.floor(b/10)%10);
+        third = a * (Math.floor(b/100));
+
+        alert(first + '\n' + second + '\n' + third + '\n' + (a*b));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

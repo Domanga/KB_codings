@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var child = window.open('','', 'width = 300, height = 200');
+        var width = window.width;
+        var height = window.height;
+        child.resizeTo(width,height);
+
+        if(child) {
+            child.document.write('<h1>From Parent window</h1>');
+        }
+        else {
+            alert('팝업 차단 하세요.')
+        }
+        
+        child.moveTo(0,0);
+        setInterval(function () {
+            child.moveBy(10,10);
+            child.resizeBy(10,10);
+        },500);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

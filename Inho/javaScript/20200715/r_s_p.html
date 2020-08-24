@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var me = prompt('가위 바위 보!', '');
+        var random = Math.floor(Math.random() * 3);
+        //alert(random);
+        switch (me) {
+            case '가위':
+                switch (random) {
+                    case 0:
+                        alert('상대 : 가위 ! -> 무승부');
+                        break;
+                    case 1:
+                        alert('상대 : 바위 ! -> 패배');
+                        break;
+                    case 2:
+                        alert('상대 : 보 ! -> 승리');
+                        break;
+                }
+                break;
+            case '바위':
+                switch (random) {
+                    case 0:
+                        alert('상대 : 가위 ! -> 승리');
+                        break;
+                    case 1:
+                        alert('상대 : 바위 ! -> 무승부');
+                        break;
+                    case 2:
+                        alert('상대 : 보 ! -> 패배');
+                        break;
+                }
+                break;
+            case '보':
+                switch (random) {
+                    case 0:
+                        alert('상대 : 가위 ! -> 패배');
+                        break;
+                    case 1:
+                        alert('상대 : 바위 ! -> 승리');
+                        break;
+                    case 2:
+                        alert('상대 : 보 ! -> 무승부');
+                        break;
+                }
+                break;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

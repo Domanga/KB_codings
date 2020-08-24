@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function selfnum(number) {
+            this.num = number;
+            this.sum = 0;
+            this.bool = [];          
+        }
+
+        selfnum.prototype.toString = function () {
+
+        }
+
+        selfnum.prototype.GetSelf = function () {
+            var mod;
+
+            sum += this.num;
+
+            while(this.num>0) {
+                mod = Math.floor(this.num % 10);
+                this.num = Math.floor(this.num / 10);
+                this.sum += mod;
+            }
+            return this.sum;
+        }
+
+        selfnum.prototype.IsSelf = function () {
+            for(var i =0;i<this.number;i++) {
+                if(GetSelf() == this.number) {
+                    this.bool[i] = false;
+                }
+            }
+            var output = '';
+            for(var i =0;i<this.number;i++) {
+                if(bool[i] != false) {
+                    output += i + ' ';
+                }
+            }
+            return output;
+        }
+
+        var test = new selfnum(100);
+        console.log(test.IsSelf());
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('h3').filter(':even').css ({
+                backgroundColor: 'black',
+                color: 'gray'
+            });
+            $('h3').filter(':odd').css ({
+                backgroundColor: 'gray',
+                color: 'black'
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Headear-0</h3>
+    <h3>Headear-1</h3>
+    <h3>Headear-2</h3>
+    <h3>Headear-3</h3>
+    <h3>Headear-4</h3>
+    <h3>Headear-5</h3>
+</body>
+</html>

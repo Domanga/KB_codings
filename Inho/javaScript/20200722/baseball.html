@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var number = []; // 사용자가 입력한 값들을 저장
+            var i = 0; // while문에 사용되는 임의의 변수 i
+            var answer1 = []; // 랜덤으로 생성된 정수3개 정답에 저장
+            var answer = ''; // 정답을 저장받는 변수
+            var output = ''; // 사용자의 입력을 저장받는 변수
+            var history = ''; // 사용자가 제출한 정답들을 저장받는 변수
+            var time = 0; // 타이머
+            var val;
+            var wrongCount = 0;
+            var array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+            var check_reduce = 1;
+            var check_Arr = [];
+
+            function sameNum(n, arr) { // 중복 검사 함수                
+                for (var i = 0; i < arr.length; i++) {
+                    if (n === arr[i]) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            while (i < 3) { // 정수 3개 랜덤 생성 -> 정답
+                var random = Math.floor(Math.random() * (10));
+                if (!sameNum(random, answer1)) {
+                    answer1.push(random);
+                    answer += random;
+                    i++;
+                }
+            }
+
+            $('.left').css('float', 'left'); // float : left 
+
+            $('input.text').css({
+                width: '260px',
+                height: '40px',
+                margin: '5px',
+                fontSize: '20px'
+            });
+
+            $('input.num').val(function (index) { // value값 0~9까지 부여
+                return index;
+            }).css({
+                width: '40px',
+                height: '40px',
+                margin: '5px',
+                fontSize: '20px',
+            });
+
+            $('input.cancel').val("취소").css({
+                width: '100px',
+                height: '50px',
+                fontSize: '25px'
+            })
+
+            $('input.submit').val("제출").css({
+                width: '100px',
+                height: '50px',
+                fontSize: '25px',
+                marginLeft: '50px'
+            })
+
+            $('input.answer').val("정답은?").css({
+                width: '100px',
+                height: '50px',
+                fontSize: '25px',
+            })
+
+            $('input.history').css({
+                width: '240px',
+                height: '300px',
+                margin: '5px',
+                fontSize: '20px',
+            });
+
+            $('.num').click(function (index) { // 숫자버튼 클릭 이벤트
+                if (number.length < 3) { // 숫자 3개만
+
+                    val = $(this).val(); // value값 받아와서
+
+                    if (!sameNum(val, number)) { // 중복 검사하고
+                        number.push(val); // 배열에 push
+                        output += val;
+                    }
+                    $('.current').html(output); // 현재 입력상황 출력
+                }
+            });
+
+            $('.cancel').click(function () {
+                if (output != null) {
+                    number.pop(val);
+                    output = output.slice(0, -1);
+                    $('.current').html(output);
+                }
+            });
+
+            $('.submit').click(function () { // 제출버튼 클릭 이벤트
+
+                var ballcount = 0; // 볼카운트
+                var strikecount = 0; // 스트라이크 카운트
+                for (var i = 0; i < 3; i++) {
+                    for (var j = 0; j < 3; j++) {
+                        if (answer[i] === number[j] && i != j) {
+                            ballcount++;
+                        } else if (answer[i] === number[j] && i == j) {
+                            strikecount++;
+                        }
+                    }
+                }
+                if (strikecount == 0 && ballcount == 0) { // history 저장
+                    history += output + ' OUT <br>';
+                } else {
+                    history += output + '  ' + strikecount + 'S ' + ballcount + 'B <br>';
+                }
+                $('h1.history').html(history); // 출력
+
+                if (strikecount == 3) {
+                    alert('정답입니다 !! 무려 ' + time + '초 만에 맞췄네요?');
+                } else {
+                    wrongCount++;
+                }
+                var randomIndex = Math.floor(Math.random() * 8);
+
+
+                if (wrongCount != 0 && wrongCount % 2 == 0) {
+                    if (check_reduce == 1) {
+                        array.splice(array.indexOf(answer1[0]), 1);
+                        array.splice(array.indexOf(answer1[1]), 1);
+                        array.splice(array.indexOf(answer1[2]), 1);
+                        check_reduce++;
+                    }
+                    console.log(wrongCount + "롱카운트");
+                    for (var i in array) {
+                        console.log(array[i]);
+                    }
+
+                    $('.num').filter(function (index) {
+                        if (!sameNum(randomIndex, check_Arr)) {
+                            return index === array[randomIndex];
+                        }
+                    }).css('color', 'red');
+                }
+
+                number.length = 0; // 요소들 초기화
+                output = '';
+                $('.current').html('defalut');
+            });
+
+            var check = 1; // flag 설정
+            $('.answer').click(function () { // 정답버튼 클릭 이벤트
+                if (check == 1) {
+                    $(this).val(answer);
+                    check = 2;
+                } else {
+                    $(this).val('정답은?');
+                    check = 1;
+                }
+            });
+
+            setInterval(function () {
+                time += 1;
+                $('.timer').html(time);
+            }, 1000)
+        });
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="left">
+        <!-- <input type="text" class="text" value=""> -->
+        <h1 class="current">defalut</h1>
+
+        <input type="button" class="num" value="">
+        <input type="button" class="num" value="">
+        <input type="button" class="num" value="">
+        <input type="button" class="num" value="">
+        <input type="button" class="num" value="">
+        <br>
+        <input type="button" class="num" value="">
+        <input type="button" class="num" value="">
+        <input type="button" class="num" value="">
+        <input type="button" class="num" value="">
+        <input type="button" class="num" value="">
+        <br><br>
+        <input type="button" class="cancel" value="">
+        <input type="submit" class="submit" value="">
+        <br><br>
+        <input type="button" class="answer" value="">
+    </div>
+    <div class="left" style="width: 200px;">
+        <h1 class="history">History</h1>
+    </div>
+    <div>
+        <p class="timer">time</p>
+    </div>
+</body>
+
+</html>

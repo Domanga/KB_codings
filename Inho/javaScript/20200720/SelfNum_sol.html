@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = Number(prompt('숫자를 입력하시오.', ''));
+
+
+        function d(n) {
+            var sum = n;
+
+            while (true) {
+                if (n == 0) {
+                    break;
+                }
+                sum += n % 10;
+                n = Math.floor(n / 10);
+            }
+            return sum;
+        }
+
+        var arr = new Array(a + 1);
+        arr.fill(false);
+        for (var i = 1; i < a + 1; i++) {
+            var index = d(i);
+            arr[index] = true;
+        }
+        var output = '';
+        for (var i = 1; i < a + 1; i++) {
+            if (arr[i] == false) {
+                output += i + '  ';
+            }
+        }
+        console.log(output);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

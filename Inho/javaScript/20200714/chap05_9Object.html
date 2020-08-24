@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var student1 = {
+            이름: '정인호',
+            자바: 80,
+            씨샵: 85,
+            output1: 'good'
+        }
+
+        var student2 = {
+            이름 : '이동준',
+            자바 : 100,
+            씨샵 : 100,
+            output : 'perfect'
+        }
+        alert('이름' in student1);
+        alert('이름' in student2);
+
+        var output = '';
+        with(student1) {
+            output += '이름 : ' + 이름 + '\n';
+            output += '자바 : ' + 자바 + '\n';
+            output += '씨샵 : ' + 씨샵 + '\n';
+        }
+        alert(output);
+
+        student1.성별 = '남자';
+        alert(student1.성별);
+
+        for (var key in student1) {
+            alert(key + " : " + student1[key]);
+        }
+        student1.toString = function () {
+            var output = '';
+            for (var key in this) {
+                if (key != 'toString') {
+                    output += key + '\t' + this[key] + '\n';
+                }
+            }
+            return output;
+        };
+        alert(student1.toString());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

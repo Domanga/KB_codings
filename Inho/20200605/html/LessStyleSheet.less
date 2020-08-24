@@ -1,0 +1,139 @@
+header {
+    width: 800px;
+    margin: 0 auto;
+
+    hgroup {
+        h1 {
+            color: red;
+        }
+
+        h2 {
+            color: blue;
+        }
+    }
+
+    nav {
+        ul {
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+    }
+}
+
+a{
+    &:hover {
+        background-color: white;
+    }
+    &:active {
+       background-color: black;
+    }
+}
+
+div {
+    background-color: blue;
+    &:hover {
+        background-color: chartreuse;
+    }
+    &:active {
+        background-color: cyan;
+    }
+}
+
+@color : #FF0000;
+@hue : hue(@color);
+@saturation: saturation(@color);
+@lightness: lightness(@color);
+
+div { height: 5px;}
+
+div:nth-child(1) {background: hsl(@hue, @saturation, @lightness);}
+div:nth-child(2) {background: hsl(@hue+10, @saturation, @lightness);}
+div:nth-child(3) {background: hsl(@hue+20, @saturation, @lightness);}
+div:nth-child(4) {background: hsl(@hue+30, @saturation, @lightness);}
+div:nth-child(5) {background: hsl(@hue+40, @saturation, @lightness);}
+div:nth-child(6) {background: hsl(@hue+50, @saturation, @lightness);}
+div:nth-child(7) {background: hsl(@hue+60, @saturation, @lightness);}
+div:nth-child(8) {background: hsl(@hue+70, @saturation, @lightness);}
+div:nth-child(9) {background: hsl(@hue+80, @saturation, @lightness);}
+div:nth-child(10) {background: hsl(@hue+90, @saturation, @lightness);}
+div:nth-child(11) {background: hsl(@hue+100, @saturation, @lightness);}
+div:nth-child(12) {background: hsl(@hue+110, @saturation, @lightness);}
+div:nth-child(13) {background: hsl(@hue+120, @saturation, @lightness);}
+div:nth-child(14) {background: hsl(@hue+130, @saturation, @lightness);}
+div:nth-child(15) {background: hsl(@hue+140, @saturation, @lightness);}
+div:nth-child(16) {background: hsl(@hue+150, @saturation, @lightness);}
+div:nth-child(17) {background: hsl(@hue+160, @saturation, @lightness);}
+div:nth-child(18) {background: hsl(@hue+170, @saturation, @lightness);}
+div:nth-child(19) {background: hsl(@hue+180, @saturation, @lightness);}
+div:nth-child(20) {background: hsl(@hue+190, @saturation, @lightness);}
+div:nth-child(21) {background: hsl(@hue+200, @saturation, @lightness);}
+div:nth-child(22) {background: hsl(@hue+210, @saturation, @lightness);}
+div:nth-child(23) {background: hsl(@hue+220, @saturation, @lightness);}
+div:nth-child(24) {background: hsl(@hue+230, @saturation, @lightness);}
+div:nth-child(25) {background: hsl(@hue+240, @saturation, @lightness);}
+div:nth-child(26) {background: hsl(@hue+250, @saturation, @lightness);}
+div:nth-child(27) {background: hsl(@hue+260, @saturation, @lightness);}
+div:nth-child(28) {background: hsl(@hue+270, @saturation, @lightness);}
+div:nth-child(29) {background: hsl(@hue+280, @saturation, @lightness);}
+div:nth-child(30) {background: hsl(@hue+290, @saturation, @lightness);}
+div:nth-child(31) {background: hsl(@hue+300, @saturation, @lightness);}
+div:nth-child(32) {background: hsl(@hue+310, @saturation, @lightness);}
+div:nth-child(33) {background: hsl(@hue+320, @saturation, @lightness);}
+div:nth-child(34) {background: hsl(@hue+330, @saturation, @lightness);}
+div:nth-child(35) {background: hsl(@hue+340, @saturation, @lightness);}
+div:nth-child(36) {background: hsl(@hue+350, @saturation, @lightness);}
+div:nth-child(37) {background: hsl(@hue+360, @saturation, @lightness);}
+
+.button() {
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+div {
+    background: red;
+    .button();
+}
+
+.linearGradient(@start, @end) {
+    background: @start;
+    background: -moz-linear-gradient(top, @start 0%, @end 100%);
+    background: -webkit-linear-gradient(top, @start 0%, @end 100%);
+    background: -o-linear-gradient(top, @start 0%, @end 100%);
+    background: -ms-linear-gradient(top, @start 0%, @end 100%);
+    background: linear-gradient(top, @start 0%, @end 100%);
+}
+
+.button(@width, @height, @radius) {
+    width: @width;
+    height: @height;
+    line-height: @height;
+    text-align: center;
+    border-radius: @radius;
+}
+
+* {margin: 0; padding: 0;}
+div {
+    margin: 10px;
+    float: left;
+
+    &:nth-child(1) {
+        .linearGradient(#0094FF, #004F89);
+        .button(200px, 100px, 10px);
+    }
+    
+    &:nth-child(2) {
+        .linearGradient(#0094FF + #CC0000, #004F89+#cc0000);
+        .button(200px, 100px, 10px);
+    }
+    
+    &:nth-child(3) {
+        .linearGradient(#0094FF+#ff0000, #004F89+#ff0000);
+        .button(200px, 100px, 10px);
+    }
+}

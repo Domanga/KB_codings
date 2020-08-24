@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+
+            var sun = document.getElementById('sun');
+            var earth = document.getElementById('earth');
+            var moon = document.getElementById('moon');
+
+            var bg = document.getElementById('bg');
+            bg.style.backgroundImage = 'url(universe.jpg)';
+            bg.style.backgroundRepeat = 'no-repeat';
+            bg.style.backgroundSize = '100%';
+            bg.style.width = '800px';
+            bg.style.height = '800px';
+
+            bg.onclick = function () {
+                sun.innerHTML = '<img src="sun.png " width = 60px>';
+                earth.innerHTML = '<img src="earth.png " width = 35px>';
+                moon.innerHTML = '<img src="moon.png " width = 20px>';
+
+            };
+            sun.style.position = 'absolute';
+            earth.style.position = 'absolute';
+            moon.style.position = 'absolute';
+            sun.style.left = 200 + 'px';
+            sun.style.top = 200 + 'px';
+
+            var earthAngle = 0;
+            var moonAngle = 0;
+
+            setInterval(function () {
+                var earthLeft = 250 + 150 * Math.cos(earthAngle);
+                var earthTop = 200 + 150 * Math.sin(earthAngle);
+
+                var moonLeft = earthLeft + 50 * Math.cos(moonAngle);
+                var moonTop = earthTop + 50 * Math.sin(moonAngle);
+
+                earth.style.left = earthLeft + 'px';
+                earth.style.top = earthTop + 'px';
+
+                moon.style.left = moonLeft + 'px';
+                moon.style.top = moonTop + 'px';
+
+                earthAngle += 0.1;
+                moonAngle += 0.3;
+            }, 2000 / 50)
+        };
+    </script>
+</head>
+
+<body>
+    <div id="bg">
+        <h1 id="sun">sun</h1>
+        <h1 id="earth">earth</h1>
+        <h1 id="moon">moon</h1>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+1. 설치 생략
+2. 
+vi /etc/sysconfig/network-scripts/ifcfg-ens33
+BOOTPROTO=static		//수정
+ONBOOT=yes			//수정
+IPADDR=192.168.0.250		//삽입
+NETMASK=255.255.255.0		//삽입
+GATEWAY=192.168.0.1		//삽입
+DNS1=8.8.8.8			//삽입
+DNS2=8.8.4.4			//삽입
+
+systemctl restart network	//네트워크 재시작
+ip a				//네트워크 확인
+
+3. 생략
+
+4.
+yum -y install lynx		//lynx 다운로드
+mkdir src
+cd src
+lynx proftpd.org		//홈페이지 접속해 proftpd다운로드
+tar zxvf proftpd-1.3.5e.tar.gz	//압축해제
+cd proftpd-1.3.5e		//디렉터리 이동
+./configure --prefix=/server/proftpd --sysconfdir=/server/conf/proftpd
+make && make install && echo $?
+vi /server/conf/proftpd/proftpd.conf
+      9 DefaultAddress                  192.168.0.250
+     10 DisplayLogin                    /server/conf/proftpd/welcome.msg
+     32 Group                           nobody
+
+vi /server/conf/proftpd/welcome.msg	//메세지파일 작성
+[예시]
+
+######################
+###                ###
+###  HI~ Here is   ###
+###  rpgmaster's   ###
+###  FTP Server    ###
+###                ###
+######################
+
+/server/proftpd
+cd /server/proftpd/sbin
+./proftpd &			//proftpd 실행
+firewall-cmd --add-service=ftp --permanent	//방화벽설정
+firewall-cmd --reload				//방화벽 재시작
+useradd test1			//ftp 접속용 계정생성
+passwd test1			//비밀번호 설정
+
+이후 ftp 접속해 upload, download
+
+5-1.
+//의존성 해결(mariadb 및 php까지)
+yum -y install cmake openssl openssl-devel \
+libtermcap libtermcap-devel gdbm-devel \
+zlib* libxml* freetype* libpng* libjpeg* gd gd-dev \
+libmcrypt libmcrypt-devel mhash mhash-devel apr apr-* libxml2 \
+iconv unixODBC readline-devel \
+qpixman qpixman-devel netpbm* libxslt* gmp gmp-devel \
+bzip2-devel openssl-devel pcre-devel curl curl-devel \
+libmcrypt libmcrypt-devel mhash mhash-devel enchant-devel enchant \
+libicu libicu-devel net-tools setuptool \
+vim-enhanced lrzsz xinetd gcc gcc-c++ ncurses ncurses-devel cmake \
+bison libevent-devel
+
+
+wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz
+wget http://mirror.navercorp.com/apache//apr/apr-1.6.5.tar.gz
+wget http://mirror.navercorp.com/apache//apr/apr-util-1.6.1.tar.gz
+wget http://apache.mirror.cdnetworks.com//httpd/httpd-2.4.37.tar.gz
+tar zxvf httpd-2.4.37.tar.gz
+tar zxvf apr-1.6.5.tar.gz
+tar zxvf apr-util-1.6.1.tar.gz
+tar zxvf pcre-8.38.tar.gz
+
+cd pcre-8.38
+./configure && make && make install && echo $?
+
+cd /root/src
+mv apr-1.6.5 ./httpd-2.4.37/srclib/
+mv apr-util-1.6.1 ./httpd-2.4.37/srclib/
+cd ./httpd-2.4.37/srclib/
+mv apr-1.6.5/ apr
+mv apr-util-1.6.1/ apr-util
+cd ..
+./configure --prefix=/server/httpd --sysconfdir=/server/conf/httpd --with-included-apr --with-pcre=/usr/local/bin/pcre-config
+make && make install && echo $?
+
+vi /server/conf/httpd/httpd.conf	//아파치설정편집
+    194 ServerName 192.168.0.250:80	//서버IP설정
+
+vi /usr/lib/systemd/system/httpd.service	//systemd에 httpd서비스 등록
+[Unit]
+Description=Apache HTTP Server
+After=network.target
+
+[Service]
+Type= forking
+ExecStart = /server/httpd/bin/apachectl start
+ExecStop = /server/httpd/bin/apachectl stop
+
+[Install]
+WantedBy=multi-user.target
+
+systemctl daemon-reload
+systemctl start httpd
+systemctl status httpd
+
+firewall-cmd --add-service=http --permanent
+firewall-cmd --reload
+
+웹에 접속해 확인(It works)
+
+6.
+wget mirror.koreaidc.com/mariadb/mariadb-10.1.31.tar.gz
+tar zxvf mariadb-10.1.31.tar.gz
+cmake \
+-DCMAKE_INSTALL_PREFIX=/server/mysql \
+-DWITH_EXTRA_CHARSETS=all \
+-DMYSQL_DATADIR=/free1/mysql_data \
+-DENABLED_LOCAL_INFILE=1 \
+-DDOWNLOAD_BOOST=1 \
+-DWITH_BOOST=../boost_1_59_0 \
+-DWITH_PARTITION_STORAGE_ENGINE=1 \
+-DWITH_FEDERATED_STORAGE_ENGINE=1 \
+-DWITH_BLACKHOLE_STORAGE_ENGINE=1 \
+-DWITH_MYISAM_STORAGE_ENGINE=1 \
+-DENABLED_LOCAL_INFILE=1 \
+-DMYSQL_UNIX_ADDR=/tmp/mysql.sock \
+-DSYSCONFDIR=/etc \
+-DDEFAULT_CHARSET=utf8 \
+-DDEFAULT_COLLATION=utf8_general_ci \
+-DWITH_EXTRA_CHARSETS=all
+
+make && make install && echo $?
+
+useradd -M mysql -u 27 >& /dev/null
+chown -R root:mysql /server/mysql
+cd /server/mysql
+chmod 700 support-files/mysql.server
+cp support-files/mysql.server /etc/rc.d/init.d/mysql
+ln -s /etc/rc.d/init.d/mysql /etc/rc.d/rc3.d/S97mysql
+cp support-files/mysql.server /usr/bin/
+
+vi /etc/my.cnf
+[client]
+default-character-set = utf8
+port = 3306
+socket = /tmp/mysql.sock
+default-character-set = utf8
+#
+[mysqld]
+socket=/tmp/mysql.sock
+datadir=/free/mysql_data
+[client]
+default-character-set = utf8
+port = 3306
+socket = /tmp/mysql.sock
+default-character-set = utf8
+#
+[mysqld]
+socket=/tmp/mysql.sock
+datadir=/free/mysql_data
+basedir =/server/mysql
+#user = mysql
+#bind-address = 0.0.0.0
+#
+skip-external-locking
+key_buffer_size = 384M
+max_allowed_packet = 1M
+table_open_cache = 512
+sort_buffer_size = 2M
+read_buffer_size = 2M
+read_rnd_buffer_size = 8M
+myisam_sort_buffer_size = 64M
+thread_cache_size = 8
+query_cache_size = 32M
+#
+#dns query
+skip-name-resolve
+#
+#connection
+max_connections = 1000
+max_connect_errors = 1000
+wait_timeout= 60
+#
+#slow-queries
+#slow_query_log = /free/mysql_data/slow-queries.log
+#long_query_time = 3
+#log-slow-queries = /free/mysql_data/mysql-slow-queries.log
+#
+##timestamp
+explicit_defaults_for_timestamp
+symbolic-links=0
+#
+### log
+log-error=/free/mysql_data/mysqld.log
+pid-file=/tmp/mysqld.pid
+#
+###chracter
+character-set-client-handshake=FALSE
+init_connect = SET collation_connection = utf8_general_ci
+init_connect = SET NAMES utf8
+character-set-server = utf8
+collation-server = utf8_general_ci
+#
+symbolic-links=0
+#
+##Password Policy
+#validate_password_policy=LOW
+#validate_password_policy=MEDIUM
+#
+### MyISAM Spectific options
+default-storage-engine = myisam
+key_buffer_size = 32M
+bulk_insert_buffer_size = 64M
+myisam_sort_buffer_size = 128M
+myisam_max_sort_file_size = 10G
+myisam_repair_threads = 1
+#
+### INNODB Spectific options
+#default-storage-engine = InnoDB
+#skip-innodb
+#innodb_additional_mem_pool_size = 16M
+#innodb_buffer_pool_size = 1024MB
+#innodb_data_file_path = ibdata1:10M:autoextend
+#innodb_write_io_threads = 8
+#innodb_read_io_threads = 8
+#innodb_thread_concurrency = 16
+#innodb_flush_log_at_trx_commit = 1
+#innodb_log_buffer_size = 8M
+#innodb_log_file_size = 128M
+#innodb_log_files_in_group = 3
+#innodb_max_dirty_pages_pct = 90
+#innodb_lock_wait_timeout = 120
+#
+[mysqldump]
+default-character-set = utf8
+max_allowed_packet = 16M
+#
+[mysql]
+no-auto-rehash
+default-character-set = utf8
+#
+[myisamchk]
+key_buffer_size = 256M
+sort_buffer_size = 256M
+read_buffer = 2M
+write_buffer = 2M
+
+firewall-cmd --add-port=3306/tcp --permanent
+firewall-cmd --reload
+
+./scripts/mysql_install_db --user=mysql --datadir=/free/mysql_data/
+
+vi /usr/lib/systemd/system/mariadb.service
+[Unit]
+Description=MySQL Server
+After=network.target
+
+[Service]
+Type= forking
+ExecStart = /etc/rc.d/init.d/mysql start
+ExecStop = /etc/rc.d/init.d/mysql stop
+
+[Install]
+WantedBy=multi-user.target
+
+systemctl daemon-reload
+이하 생략
+
+5-2.
+wget mirror.koreaidc.com/php/php-7.2.3.tar.gz
+tar zxvf php-7.2.3.tar.gz
+cd php-7.2.3
+./configure \
+--prefix=/server/php \
+--with-apxs2=/server/httpd/bin/apxs \
+--with-config-file-path=/server/conf/httpd/ \
+--with-config-file-scan-dir=/server/conf/httpd/ \
+--with-mysqli=/server/mysql/bin/mysql_config \
+--with-pdo-mysql=/server/mysql/bin/mysql \
+--with-libdir=lib64 \
+--with-enchant \
+--with-gettext \
+--with-gd \
+--with-jpeg-dir \
+--with-png-dir \
+--with-freetype-dir \
+--with-zlib \
+--with-gmp \
+--with-iconv \
+--with-gdbm \
+--with-pcre-regex \
+--with-bz2 \
+--with-curl \
+--with-mhash \
+--with-xsl \
+--with-openssl \
+--with-readline \
+--with-curl \
+--with-pear \
+--with-gettext \
+--with-xmlrpc \
+--with-ldap \
+--enable-mysqlnd \
+--enable-bcmath \
+--enable-sockets \
+--enable-pcntl \
+--enable-ftp \
+--enable-zip \
+--enable-bcmath \
+--enable-mbstring \
+--enable-calendar \
+--enable-simplexml \
+--enable-json \
+--enable-hash \
+--enable-session \
+--enable-soap \
+--enable-xml \
+--enable-wddx \
+--enable-opcache \
+--enable-intl \
+--enable-cli \
+--enable-maintainer-zts \
+--enable-debug \
+--enable-mbregex \
+--enable-libxml \
+--enable-dba \
+--enable-wddx \
+--enable-shmop \
+--enable-sysvsem \
+--enable-sysvshm \
+--enable-sysvmsg \
+--enable-exif
+make && make install && echo $?
+
+vi /etc/profile
+#PHP
+export PATH=$PATH:/server/php/bin	//추가
+source /etc/profile
+
+vi /server/conf/httpd/httpd.conf
+    391     AddType application/x-httpd-php .php .html		//추가
+    392     AddType application/x-httpd-php-source .phps	//추가
+    253     DirectoryIndex index.php index.html			//수정
+
+vi /server/httpd/htdocs/index.html
+<? phpinfo(); ?>
+
+mv index.html index.php
+

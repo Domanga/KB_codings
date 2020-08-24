@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            var array = [{
+                name: 'naver',
+                link: 'http://naver.com'
+            }];
+
+            var arr = ['고구마', '감자', '배추', '고추'];
+
+            // $.each(array, function (index, item) {
+            //     var output = '';
+
+            //     output += '<a href="' + item.link + '"> ' + item.name;
+            //     output += '<h1> hello javascript</h1>';
+            //     output += '</a>';
+            //     document.body.innerHTML += output;
+            // });
+
+            $.each(arr, function (index, item) {
+                var output = '';
+
+
+                output += '<h1>' + item + '</h1>';
+
+                document.body.innerHTML += output;
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

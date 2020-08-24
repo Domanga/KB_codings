@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () { 
+        var header_1 = document.getElementById('header-1');
+        var header_2 = document.getElementById('header-2');
+
+        var h_1s = document.getElementsByTagName('h2');
+        for(var i=0;i<h_1s.length;i++) {
+            h_1s[i].innerHTML = (i+1) + '번째 h2 태그 입니다.';
+        }
+        
+        header_1.innerHTML = 'This is header-1 ID';
+        header_2.innerHTML = 'This is header-2 ID';
+        };
+    </script>
+</head>
+
+<body>
+    <h1 id="header-1">Header1</h1>
+    <h1 id="header-2">Header2</h1>
+    <h2>for Test</h2>
+    <h2>for Test</h2>
+    <h2>for Test</h2>
+    <h2>for Test</h2>
+    <h2>for Test</h2>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function square(x) {
+            return x*x;
+        }
+
+        function pitas(w,h) {
+            return Math.sqrt(square(w) + square(h));
+        }
+        alert(pitas(3,4));
+
+        function bool(w,h, hypo) {
+            if(w*w + h*h == hypo*hypo) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        alert(bool(3,4,5));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

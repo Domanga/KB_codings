@@ -1,0 +1,4 @@
+﻿  question_10.c
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice1\Practice10\question_10.c(7,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  LINK : C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice1\Debug\Practice10.exe을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
+  Practice10.vcxproj -> C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice1\Debug\Practice10.exe

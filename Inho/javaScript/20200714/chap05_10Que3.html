@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var attribute = {
+            이름 : 'Nature of Code',
+            가격 : '30000원',
+            저자 : '다니엘 쉬프만',
+            ISBN : '97888968481901',
+            페이지수 : '620페이지'
+        }
+
+        attribute.toString = function () {
+            var output = '';
+            for (var key in this) {
+                if (key != 'toString') {
+                    output += key + ' = ' + this[key] + '\n';
+                }
+            }
+            return output;
+        }
+        alert(attribute);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

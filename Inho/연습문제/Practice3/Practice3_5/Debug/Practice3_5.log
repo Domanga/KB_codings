@@ -1,0 +1,7 @@
+﻿  question_5.c
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice3\Practice3_5\question_5.c(8,28): warning C4013: 'strlen'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice3\Practice3_5\question_5.c(58,10): warning C4477: 'printf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice3\Practice3_5\question_5.c(58,10): warning C4477: 'printf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int'입니다.
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice3\Practice3_5\question_5.c(60,14): warning C4477: 'printf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int'입니다.
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice3\Practice3_5\question_5.c(60,14): warning C4477: 'printf' : 서식 문자열 '%s'에 'char *' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int'입니다.
+  Practice3_5.vcxproj -> C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice3\Debug\Practice3_5.exe

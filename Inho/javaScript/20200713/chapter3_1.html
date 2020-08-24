@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var output = prompt('인사하시오.', '0');
+        //alert(output);
+        if(output.indexOf('안녕') >=0) {
+            alert('안녕하세요.');
+        }
+        else if (output == '잘자' || output == '잘 자') {
+            alert('잘 자요.');
+        }
+
+        var output = prompt('인사하시오.', '0');
+        output.indexOf('안녕') <= 0 && alert('인사를 안하다니?');
+
+        var number = Number(prompt('숫자를 입력하세요.', '0'));
+        number % 4 == 0 && alert('4로 나눌 수 있습니다.');
+        number % 4 == 0 || alert('4로 나눌 수 없습니다.');
+
+        var number = Number(prompt('숫자를 입력하세요.', '0'));
+        number > 0 && alert('양수');
+        number > 0 || alert('음수');
+        number == 0 && alert('0');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

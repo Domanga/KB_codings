@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background4_1"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="85sp"
+        android:layout_height="85sp"
+        android:background="@drawable/play_image_1"
+        android:text="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="85sp"
+        android:layout_height="85sp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/gear_image_1"
+        android:text="setting"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/start" />
+
+    <Button
+        android:id="@+id/rank"
+        android:layout_width="85sp"
+        android:layout_height="85sp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/quality_image_1"
+        android:text="rank"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/setting" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="85sp"
+        android:layout_height="85sp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/logout_image_1"
+        android:text="exit"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/rank" />
+</androidx.constraintlayout.widget.ConstraintLayout>

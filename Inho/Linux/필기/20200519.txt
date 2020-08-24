@@ -1,0 +1,74 @@
+vi /etc/sysconfig/network-scripts/ifcfg-[NIC카드이름]
+ex) vi /etc/sysconfig/network-scripts/ifcfg-ens33
+
+se nu
+:4 static
+:15 yes
+16 IPADDR=10.0.0.10
+1
+
+
+
+systemctl restart network
+mkdir src
+
+
+
+yum -y install gcc gcc-c++ wget
+
+putty로 이동 연동
+ip  주소 10.0.0.10(내가 만든것)
+root 
+1234
+
+#Proftpd 설치
+yum -y install wget
+
+yum -y install gcc gcc-c++ wget
+
+proftpd.org 접속 -> 링크주소 복사
+wget ftp://ftp.proftpd.org/distrib/source/proftpd-1.3.6c.tar.gz 
+
+//
+GCC설치(rpm)
+rpm -ivh gcc-4.8.5-39.el7.x86_64.rpm    => 의존성 에러
+rpm -ivh cpp-4.8.5-39.el7.x86_64.rpm    -> 의존성 에러
+rpm -ivh libmpc-1.0.1-3.el7.x86_64.rpm  => 의존성 에러
+ls | grep mpfr  => mpfr라이브러리 설치패키지 이름 확인
+rpm -ivh mpfr-3.1.1-4.el7.x86_64.rpm    => 설치
+rpm -ivh libmpc-1.0.1-3.el7.x86_64.rpm  => 설치
+rpm -ivh cpp-4.8.5-39.el7.x86_64.rpm     => 설치
+rpm -ivh glibc-devel-2.17-292.el7.x86_64.rpm =>의존성에러
+rpm -ivh glibc-headers-2.17-292.el7.x86_64.rpm   => 의존성에러
+rpm -ivh kernel-headers-3.10.0-1062.el7.x86_64.rpm   => 설치
+rpm -ivh glibc-headers-2.17-292.el7.x86_64.rpm   => 설치
+rpm -ivh glibc-devel-2.17-292.el7.x86_64.rpm    => 설치
+rpm -ivh gcc-4.8.5-39.el7.x86_64.rpm   => GCC설치 완료!! //
+
+
+
+tar zxvf proftpd-1.3.6c.tar.gz 압축(묶음)해제o
+.
+
+./configure \ //컴파일을 위한 체크
+--prefix=/server/proftpd \
+--sysconfdir=/server/conf/proftpd && make && make install && echo $?
+
+vi /server/conf/proftpd/proftpd.conf //proftpd 설정파일
+         9 DefaultAddress                  10.0.0.30 //서버  ip 지정
+       30 Group                          pr  nobody  //nogroup 은 없으므로 변경
+
+cd /server/proftpd/sbin/   ////실행파일이 모여있는 디렉터리 이동
+./proftpd &   //proftpd를 백그라운드로 실행
+
+firewall-cmd --add-service=ftp --permanent  //ftp 서비스 방화벽해제
+firewall-cmd --reload //방화벽설정 업로드
+
+useradd ftptest //사용자 추가
+passwd ftptest //추가한 사용자에 대해 비밀번호 부여
+
+cmd -> ftp -> o 10.0.0.x  -> ID/PW입력 -> 끝!!!
+
+
+
+

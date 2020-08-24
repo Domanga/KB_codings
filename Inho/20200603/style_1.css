@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+div.body{
+    width: 500px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    color: wheat;
+    width: 500px;
+    height: 50px;
+    text-shadow: 10px 10px 10px black;
+}
+
+div.container{
+    background-image: url('photo.jpg');
+    width: 500px;
+    height: 500px;
+    background-size: 100% 100%;
+    overflow: hidden;
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+
+div.part1{
+    width: 250px;
+    float: left;
+}
+
+div.part2{
+    width: 250px;
+    float: left;
+}
+
+p.part{
+    width: 250px;
+    float: left;
+    color: blue;
+}

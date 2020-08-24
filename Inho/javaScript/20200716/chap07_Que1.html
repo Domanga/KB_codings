@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pork(name, kg, price) {
+            this.이름 = name;
+            this.무게 = kg;
+            this.가격 = price;
+        }
+
+        pork.prototype.calculate = function(kg) {
+            var a = kg / 100;
+            return a * this.가격;
+        }
+
+        var p = new pork('돼지삼겹살', 100, 1690);
+        alert(p.calculate(200));
+
+        let number = 273;
+        number.print = function() {
+            console.log(this);
+        };
+
+        number.print();
+        number.print();
+        number.print();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

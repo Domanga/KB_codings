@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Student(name, korean, math, english, science) {
+
+            this.이름 = name;
+            this.국어 = korean;
+            this.수학 = math;
+            this.영어 = english;
+            this.과학 = science;
+
+            this.toString = function () {
+                return '이름 : ' + name + '  국어 : ' + korean + '  수학 : ' + math + '  영어 : ' + english +
+                    '  과학 : ' + science;
+            };
+
+        }
+        var student = [];
+        student.push(new Student('인호', 90, 80, 90, 85));
+        student.push(new Student('동원', 70, 95, 60, 80));
+        student.push(new Student('동건', 85, 90, 70, 90));
+        student.push(new Student('보검', 75, 80, 65, 80));
+        student.push(new Student('승호', 95, 75, 95, 70));
+        student.push(new Student('은우', 90, 85, 80, 80));
+        student.push(new Student('정국', 70, 40, 75, 65));
+        var output = '';
+        for (var index in student) {
+            output += student[index] + '\n';
+        }
+        alert(output);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

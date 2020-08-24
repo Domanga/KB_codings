@@ -1,0 +1,5 @@
+﻿  Allocate.c
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\20200619\C\Project0619_1\Project0619_2\Allocate.c(16,22): warning C4013: 'calloc'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\20200619\C\Project0619_1\Project0619_2\Allocate.c(21,9): warning C4013: 'realloc'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\20200619\C\Project0619_1\Project0619_2\Allocate.c(33,6): warning C4013: 'free'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  Project0619_2.vcxproj -> C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\20200619\C\Project0619_1\Debug\Project0619_2.exe

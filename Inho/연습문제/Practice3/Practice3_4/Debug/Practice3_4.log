@@ -1,0 +1,5 @@
+﻿  question_4.c
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice3\Practice3_4\question_4.c(8,28): warning C4013: 'strlen'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice3\Practice3_4\question_4.c(7,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'char [1]'과(와) 다릅니다.
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice3\Practice3_4\question_4.c(13): warning C4716: 'reverse_string': 값을 반환해야 합니다.
+  Practice3_4.vcxproj -> C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice3\Debug\Practice3_4.exe

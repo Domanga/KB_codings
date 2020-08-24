@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var arr = [1,2,3,4,5,'가나다'];
+        // alert(arr[0]);
+        // alert(arr[4]);
+        // alert(arr[5]);
+        // arr.push('finish');
+        // alert(arr[6]);
+
+        var input = prompt('입력하세요.', '');
+        for (var i = 0; i < input.length; i++) {
+            input = input.toLowerCase();
+        }
+        var arr = ['ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅅ', 'ㅇ',
+            'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ', 'ㅏ', 'ㅑ',
+            'ㅓ', 'ㅕ', 'ㅗ', 'ㅛ', 'ㅜ', 'ㅠ', 'ㅡ', 'ㅣ'
+        ];
+        var sum = '';
+
+        for (var i = 0; i < input.length; i++) {
+            if ((input.charCodeAt(i)-97) < 24) {
+                sum += arr[input.charCodeAt(i) - 97];
+            }
+        }
+        alert(sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

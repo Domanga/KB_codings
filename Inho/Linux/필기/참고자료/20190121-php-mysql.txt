@@ -1,0 +1,243 @@
+//php-mysql이 잘 연동되는지 확인
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Mariadb-test</title>
+</head>
+<body>
+<?php
+$db_host="localhost";
+$db_user="root";
+$db_passwd="123qwe";
+$db_name="????";
+$conn=mysqli_connect($db_host, $db_user, $db_passwd, $db_name);
+if (mysqli_connect_errno()){
+echo "MySQL 연결 오류: " . mysqli_connect_error();
+exit;
+} else {
+echo "DB : \"$db_name\"에 접속 성공.<br/>";
+}
+?>
+</body>
+</html>
+
+
+//원격지에서의 접속허용(모든 IP)
+INSERT INTO mysql.user (host,user,password) VALUES ('%','root',password('패스워드'));
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+FLUSH PRIVILEGES;
+
+//원격지에서의 접속허용(IP대역대,192.168.0.xxx)
+INSERT INTO mysql.user (host,user,password) VALUES ('192.168.0.%','root',password('패스워드'));
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.0.%';
+FLUSH PRIVILEGES;
+
+//원래상태로 복구
+DELETE FROM mysql.user WHERE Host='%' AND User='root';
+FLUSH PRIVILEGES;
+
+------------------------- TABLE 만들기 연습 -----------------------
+
+<?php
+
+$db_host = "192.168.0.250";
+
+$db_user = "root";
+
+$db_passwd = "123qwe";
+
+$db_name = "test";
+
+
+// MySQL - DB 접속.
+
+$conn = mysqli_connect($db_host,$db_user,$db_passwd,$db_name);
+
+if (mysqli_connect_errno()){
+
+echo "MySQL 연결 오류: " . mysqli_connect_error();
+
+exit;
+
+} else {
+
+echo "DB : \"$db_name\"에 접속 성공.<br/>";
+
+}
+
+// table 만들기
+$sql = "CREATE TABLE test
+
+(
+
+PID bigint(20) unsigned not null auto_increment,
+
+Name CHAR(255),
+
+Address CHAR(255),
+
+Age INT,
+
+PRIMARY KEY(PID)
+
+) charset=utf8";
+
+
+
+if (mysqli_query($conn,$sql)){
+
+echo "성공적으로 테이블을 만들었습니다.<br/>";
+
+} else {
+
+echo "테이블 생성 오류 : " . mysqli_error($conn);
+
+exit;
+
+}
+
+?>
+
+--------------------- 테이블 내용 쓰기 연습 ---------------------------
+<?php
+
+$db_host = "192.168.0.250";
+
+$db_user = "root";
+
+$db_passwd = "123qwe";
+
+$db_name = "test";
+
+
+// MySQL - DB 접속.
+
+$conn = mysqli_connect($db_host,$db_user,$db_passwd,$db_name);
+
+if (mysqli_connect_errno()){
+
+echo "MySQL 연결 오류: " . mysqli_connect_error();
+
+exit;
+
+} else {
+
+echo "DB : \"$db_name\"에 접속 성공.<br/>";
+
+}
+
+// 문자셋 설정, utf8.
+
+mysqli_set_charset($conn,"utf8");
+
+
+// 테이블에 값 쓰기.
+
+$sql = "INSERT INTO test (PID, Name, Address, Age)
+
+VALUES (NULL, '홍길동', '대한민국, 서울', 30)";
+
+if (mysqli_query($conn,$sql)){
+
+echo "테이블에 값 쓰기 완료: $sql<br/>";
+
+} else {
+
+echo "테이블에 값 쓰기 오류: " . mysqli_error($conn);
+
+}
+
+mysqli_close($conn);
+
+?>
+
+
+------------------------ 테이블 불러오기 연습 -------------------------
+<?php
+
+$db_host = "192.168.0.250";
+
+$db_user = "root";
+
+$db_passwd = "123qwe";
+
+$db_name = "test";
+
+
+
+// MySQL - DB 접속.
+
+$conn = mysqli_connect($db_host,$db_user,$db_passwd,$db_name);
+
+if (mysqli_connect_errno()){
+
+echo "MySQL 연결 오류: " . mysqli_connect_error();
+
+exit;
+
+} else {
+
+echo "DB : \"$db_name\"에 접속 성공.<br/>";
+
+}
+
+
+
+// 문자셋 설정, utf8.
+
+mysqli_set_charset($conn,"utf8");
+
+
+
+// 테이블 쿼리 후 내용 출력.
+
+$sql = "SELECT * FROM test";
+
+if ($result = mysqli_query($conn,$sql)){
+
+echo "<table border='1' cellpadding='5'> <tr nowrap='' bgcolor='#e0e0e0'>
+
+<th>PID</th>
+
+<th>Name</th>
+
+<th>Address</th>
+
+<th>Age</th>
+
+</tr>";
+
+
+
+while($row = mysqli_fetch_array($result)){
+
+echo "<tr>";
+
+echo "<td nowrap=''>" . $row['PID'] . "</td>";
+
+echo "<td nowrap='' bgcolor='#f4f0fa'>" . $row['Name'] . "</td>";
+
+echo "<td nowrap=''>" . $row['Address'] . "</td>";
+
+echo "<td nowrap='' bgcolor='#f4f0fa'>" . $row['Age'] . "</td>";
+
+echo "</tr>";
+
+}
+
+echo "</table>";
+
+
+
+mysqli_close($conn);
+
+} else {
+
+echo "테이블 쿼리 오류: " . mysqli_error($conn);
+
+exit;
+
+}
+
+?>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 600px;
+            height: 600px;
+            /* background-color: crimson; */
+            /*red = #ff0000*/
+            background-image: url('storm.jpg');
+            background-size: 100% 100%;
+            position: absolute;
+
+            animation-name: identifier;
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        .wrap {
+            position: relative;
+        }
+
+        @keyframes identifier {
+            0% {
+                left: 200;
+                top: 200;
+                transform:rotate(0deg)
+            }
+
+            100% {
+                left: 200;
+                top: 200;
+                transform:rotate(720000deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+
+</html>

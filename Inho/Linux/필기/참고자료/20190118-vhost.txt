@@ -1,0 +1,47 @@
+useradd vhost
+passwd vhost
+mkdir /home/vhost/book
+mkdir /home/vhost/movie
+
+vi /server/conf/httpd/httpd.conf
+Include /server/conf/extra/httpd-userdir.conf		//주석제거
+Include /server/conf/extra/httpd-vhosts.conf		//주석제거
+
+cd /server/conf/httpd/extra
+vi ./httpd-vhosts.conf
+     23 <VirtualHost 192.168.0.250:80>
+     24     DocumentRoot "/server/httpd/htdocs"
+     25     ServerName rpgmaster.com
+     26 </VirtualHost>
+     27
+     28 <VirtualHost 192.168.0.250:80>
+     29     DocumentRoot "/home/vhost/movie"
+     30     ServerName movie.rpgmaster.com
+     31 </VirtualHost>
+     32
+     33 <VirtualHost 192.168.0.250:80>
+     34     DocumentRoot "/home/vhost/book"
+     35     ServerName book.rpgmaster.com
+     36 </VirtualHost>
+
+
+cd /home/vhost/book
+vi index.html
+cd /home/vhost/movie
+vi index.html
+
+
+vi /server/conf/httpd/extra/httpd-userdir.conf
+10 #UserDir /home/vhost/*		//삭제
+16 <Directory "/home/vhost/*">
+
+vi /var/named/crazy.com.zone
+book    A       192.168.0.250		//A 호스트를 추가 
+movie   A       192.168.0.250		//A 호스트를 추가 
+
+systemctl restart named
+systemctl restart httpd
+
+인터넷 접속시 403에러 발생
+
+chmod 755 /home/vhost

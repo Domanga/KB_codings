@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var key = Number(prompt('점수를 입력하세요.', '0'));
+
+        switch (key % 2) {
+            case 0:
+                alert('짝');
+                break;
+            case 1:
+                alert('홀');
+                break;
+            default:
+                break;
+        }
+
+        var number = Number(prompt('점수를 입력하세요.', '0'));
+        number > 0 ? alert('자연수') : alert('높');
+
+        true || alert("트루?");
+        false || alert("높");
+
+        var example = 5;
+        example % 2 == 0 || alert('홀수');
+        example % 2 == 0 && alert('짝수');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+ 1  pwd
+    2  ls
+    3  ls -al
+    4  mount -t iso960 /dev/cdrom /root/cdrom -o loop
+    5  mount -t iso9660 /dev/cdrom /root/cdrom -o loop
+    6  mkdir src
+    7  ls
+    8  yum -y install gcc gcc-c++ wget
+    9  cd src
+   10  ls
+   11  pwd
+   12  wget ftp://ftp.proftpd.org/distrib/source/proftpd-1.3.7rc3.tar.gz
+   13  ls
+   14  pwd
+   15  tar .zxvf
+   16  tar.zxvf
+   17  tar .zxvf
+   18  tar.zxvf proftpd-1.3.7rc3.tar.gz
+   19  tar .zxvf proftpd-1.3.7rc3.tar.gz
+   20  tar zxvf proftpd-1.3.7rc3.tar.gz
+   21  ls
+   22  cd proftpd-1.3.7rc3
+   23  ./configure--prefix=/server/proftpd
+   24  ./configure --prefix= /server/proftpd
+   25  ./configure--prefix= /server/proftpd
+   26  ls
+   27  cd ..
+   28  ls
+   29  rm proftpd-1.3.7rc3
+   30  cd ..
+   31  rm src
+   32  cd src
+   33  cd proftpd-1.3.7rc3
+   34  ls
+   35  ./configure --prefix=/server/proftpd
+   36  ls
+   37  ./configure --prefix=/server/proftpd
+   38  ./configure --sysconfdir=/server/conf/proftpd \ make && make install && echo $?
+   39  cd ..
+   40  rm src
+   41  rmdir src
+   42  rm -r
+   43  rm. -r
+   44  rm-r
+   45  rm.-r
+   46  cd src
+   47  ls
+   48  rm mrdir
+   49  rm rmdir
+   50  rmdir proftpd-1.3.7rc3
+   51  cd..
+   52  cd ..
+   53  -r src
+   54  rm src
+   55  rm -r -f src
+   56  mkdir src
+   57  ls
+   58  pwd
+   59  yum -y install gcc gcc-c++ wget
+   60  cd src
+   61  ls
+   62  pwd
+   63  wget ftp://ftp.proftpd.org/distrib/source/proftpd-1.3.6c.tar.gz
+   64  ls
+   65  tar zxvf proftpd-1.3.6c.tar.gz
+   66  ls
+   67  cd proftpd-1.3.6c
+   68  ./configure --prefix=/server/proftpd
+   69  ls
+   70  ./configure --prefix=/server/proftpd --sysconfdir=/server/conf/proftpd \ make && make install && echo$?
+   71  ./configure  --prefix=/server/proftpd  --sysconfdir=/server/conf/proftpd \ make && make install && echo $?
+   72  ./configure  --prefix=/server/proftpd  --sysconfdir=/server/conf/proftpd
+   73  make && make install && echo $?
+   74  cd /server/proftpd
+   75  echo $?
+   76  make && make install && echo $?
+   77  cd /server/proftpd
+   78  ls
+   79  ./proftpd
+   80  cd /server/conf/proftpd
+   81  ls
+   82  vi proftpd.conf
+   83  cd /server/proftpd/sbin/
+   84   ./proftpd &
+   85  ps -ef | grep proftpd
+   86* firewall-cmd --add-service=ftp --permanent
+   87  firewall-cmd  --rerload
+   88  firewall-cmd --reload
+   89  firewall-cmd --list-all
+   90  useradd khs
+   91  password khs
+   92  userpassword khs
+   93  password khs
+   94  un do
+   95  firewall-cmd --list-all
+   96  useradd khs
+   97  password khs
+   98  passwd khs
+   99  cd!
+  100  cd~
+  101  cd ~
+  102  ls
+  103  cd src
+  104  ls
+  105  wget http://apache.mirror.cdnetworks.com//httpd/httpd-2.4.43.tar.gz
+  106  ls
+  107  tar zxvf httpd-2.4.43.tar.gz
+  108  ls
+  109  cd httpd-2.4.43
+  110  ls
+  111  yum -y install apr apr-* pere-devel
+  112  ls
+  113  ./configure \
+  114  yum -y install apr apr-* pcre-devel
+  115  ./configure --prefix=/server/httpd --syscofdir=/server/conf/httpd \ make && make install && echo $?
+  116  ./configure --prefix=/server/httpd --sysconfdir=/server/conf/httpd \ make && make install && echo $?
+  117  ./configure --prefix=/server/httpd --sysconfdir=/server/conf/httpd make && make install && echo $?
+  118  ./configure --prefix=/server/httpd --sysconfdir=/server/conf/httpd
+  119  make && make isntall && echo $?
+  120  make && make install && echo $?
+  121  vi /server/conf/httpd/httpd.conf
+  122  history

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function name() {
+            alert('first');
+        }
+
+        function name() {
+            alert('second');
+        }
+        name();
+  
+        var fff = function() {
+            alert('A');
+        }
+        var fff = function() {
+            alert('B');
+        }
+        fff();                          // 익명 함수는 선언하고 호출하라.
+
+        func();                         // 일반적인 형태는 호출 후에 선언해도 문제 없음.
+        function func() {
+            alert('함');
+        }
+        function func() {
+            alert('수');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

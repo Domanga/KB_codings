@@ -1,0 +1,26 @@
+1. create table patient (doc_id VARCHAR(5), 
+		     doc_name VARCHAR(10), 
+                            doc_department VARCHAR(20), 
+                           doc_sex VARCHAR(1), 
+                           PRIMARY KEY (doc_id)); 
+
+
+2.insert into test_0824.patient values ('1', '정인호', '외과', '남');  
+insert into test_0824.patient values ('2', '홍길동', '소아과', '남');  
+insert into test_0824.patient values ('3', '유관순', '내과', '여');  
+select * from test_0824.patient;
+
+3.create view myview as 
+select doc_id, doc_name from test_0824.patient;
+select * from myview; 
+
+4.select * from test_0824.girl_group 
+	INNER JOIN test_0824.song 
+            where girl_group.hit_song_id = song._id;
+
+create table student (이름 varchar(10), 나이 varchar(2), 학번 char(10),
+					  학과코드 char(3), 등록일 datetime default now(),
+                      primary key (학번));
+create table major (학과명 varchar(10), 학과코드 char(3), 
+					등록일 datetime default now(),
+                    primary key (학과코드));                      

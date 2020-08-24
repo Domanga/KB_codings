@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+
+    <script>
+        // $(document).ready(function () {
+        //     alert("Hello JQuery!");
+        // });
+        // $(document).ready(function () {
+        //     alert("GOOD JQuery!");
+        // });
+        // $(document).ready(function () {
+        //     alert("Bye JQuery!");
+        // });
+
+        // $(function () {
+        //     alert("Hello again JQuery!");
+        // });
+
+        $(document).ready(function () {
+            $('h1').css('color', 'orange');
+            $('div > *').css('color', 'red');
+            $('input[type="text"]').val('Hello JQuery!!');
+            alert($('input[type=text]').val());
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, nulla.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, autem.</p>
+    <div>
+        <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, nulla.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, autem.</p>
+    </div>
+    <input type="text">
+
+</html>

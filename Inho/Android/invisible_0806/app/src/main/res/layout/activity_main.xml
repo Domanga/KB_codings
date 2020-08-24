@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선택을 시작하겠습니까?"
+        android:textSize="30sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/Agree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="시작"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:text="선호하는 게임은?"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+    <RadioGroup
+        android:id="@+id/rGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/r_wind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="바람의나라 : 연" />
+
+        <RadioButton
+            android:id="@+id/r_stone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="스톤에이지 월드" />
+
+        <RadioButton
+            android:id="@+id/r_kart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="카트라이더 러쉬플러스" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/choose_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="선택 완료"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/Game_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".7"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/baram_image" />
+
+</LinearLayout>

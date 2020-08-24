@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\User\Documents\clone\2020JavaSmartWebApp_3\정인호\20200526\Project0527\practice0527_1\practice0527_1\main.c(2,1): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
+C:\Users\User\Documents\clone\2020JavaSmartWebApp_3\정인호\20200526\Project0527\practice0527_1\practice0527_1\main.c : message : '_CRT_SECURE_NO_WARNINGS'의 이전 정의를 참조하십시오.
+  practice0527_1.vcxproj -> C:\Users\User\Documents\clone\2020JavaSmartWebApp_3\정인호\20200526\Project0527\practice0527_1\Debug\practice0527_1.exe

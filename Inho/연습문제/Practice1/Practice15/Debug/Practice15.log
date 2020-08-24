@@ -1,0 +1,3 @@
+﻿  question_15.c
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice1\Practice15\question_15.c(22,12): warning C4013: 'time'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  Practice15.vcxproj -> C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice1\Debug\Practice15.exe

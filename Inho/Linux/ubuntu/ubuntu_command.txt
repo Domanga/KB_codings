@@ -1,0 +1,64 @@
+swap = memory * 2
+나머지 용량은 ext4 , /
+
+sudo apt-get update
+sudo apt-get upgrade
+
+#permission
+su = super user
+sudo = super user do
+passwd = change password
+sudo passwd root
+
+# install ssh
+sudo apt-get install ssh
+sudo vi /etc/ssh/sshd_config -> line15 Port22 / line 34 PermitRootLogin no
+
+# install ubuntu live-server
+sudo apt-get install ubuntu-desktop
+startx # ubuntu gui
+
+# install minimun ubuntu desktop 
+sudo apt-get install --no-install-recommends ubuntu-desktop 
+
+# ip confirm
+sudo apt install net-tools 
+ifconfig
+
+# visual studio code install // deb package install command
+sudo dpkg -i code*.deb 
+
+# install apache
+sudo apt-get install apache2
+apache2 -v
+
+# apache setting modify
+sudo vi /etc/apache2/sites-available/000-default.conf -> line9 ServerName (input ip)
+sudo service apache2 restart
+
+# replace index.html
+sudo mv index.html /var/www/html
+sudo vi index.html -> modify html code in terminal
+
+# replace with html file another name
+sudo vi /etc/apache2/mods/enabled/dir.conf
+DirectoryIndex ['new.html'] ~~~
+
+# install mySQL
+sudo apt-get install mysql-server
+sudo ufw allow mysql
+
+# run mySQL
+sudo systemctl start mysql
+sudo systemctl enable mysql
+sudo /usr/bin/mysql -u root -p
+
+# install ftp
+sudo apt-get install vsftpd
+sudo vim /etc/vsftpd.conf -> line31 write_enable=YES / line70 xferlong_file=/var/log/vsftpd.log
+sudo service vsftpd restart
+
+# install filezilla
+sudo apt-get install filezilla
+
+# install filezilla in windows

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var content = [{
+                    name: '정인호',
+                    region: '대구'
+                },
+                {
+                    name: '고한솔',
+                    region: '경산'
+                },
+                {
+                    name: '신동민',
+                    region: '서울'
+                }
+            ];
+
+            $('div').append(function (index) {
+                var item = content[index];
+                var output = '';
+                output += '<h1>' + item.name + '</h1>';
+                output += '<h2>' + item.region + '</h2>';
+
+                return output
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

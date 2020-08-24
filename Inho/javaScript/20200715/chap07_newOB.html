@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function makeStudent(name, age, gender, score) {
+            var someReturn = {
+                이름 : name,
+                나이 : age,
+                성별 : gender,
+                점수 : score
+            }
+            return someReturn;
+        }
+
+        var student = [];
+        student.push(makeStudent('정인호', 24, '남', 90));
+
+        function Student(name, age, gender, score) {
+            this.이름 = name;
+            this.나이 = age;
+            this.성별 = gender;
+            this.점수 = score;
+            this.toString = function() {
+                return '이름 : ' + name + ' 나이 : ' + age + ' 성별 : ' + gender + ' 점수 : ' + score;
+            }
+        }
+
+        var student1 = new Student('정인호', 24, '남', 90);
+        alert(student1.toString());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

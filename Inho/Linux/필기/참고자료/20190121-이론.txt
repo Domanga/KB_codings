@@ -1,0 +1,91 @@
+//리눅스 SIGNAL
+ 1 - SIGHUP	종료	터미널과 연결이 끊어짐
+ 2 - SIGINT	종료	인터럽트(ctrl + c)
+ 9 - SIGKILL	종료	강제종료
+19 - SIGTSTP	종료	ctrl + z
+23 - SIGSTOP	중지	SIGCONT가 올때까지 프로세스 중지
+25 - SIGCONT	무시	중지된 프로세스 실행
+
+//리눅스 파일의 종류
+일반파일	-
+디렉터리	d
+블록디바이스	b	dev/어쩌구
+문자디바이스	c	입출력장치(키보드)
+심볼릭링크	l	윈도우의 바로가기	.lnk
+소켓파일	s	서로 다른 프로세스간 데이터의 전달
+
+
+//OSI 7 Layer
+7계층(Application, 응용계층) : 사용자가 네트워크에 접근할 수 있도록 하는 인터페이스나 서비스
+	PDU : DATA
+	TCP : FTP(파일전송, 20/21), SSH(암호화원격접속, 22)
+	      TELNET(비암호화 원격접속, 23), SMTP(메일전송, 25)
+	      HTTP(웹서비스, 80), POP3(메일수신, 110)
+
+	UDP : DHCP(IP자동할당, 67/68), TFTP(파일전송, 69)
+	      SNMP(TCP/IP기반의 네트워크 관리 프로토콜, 161/162)
+
+	TCP/UDP : DNS(도메인이름을 IP로 매칭, 53)
+
+6계층(Presentation, 표현계층) : DATA의 format을 정의, 압축, 암호화
+	PDU : DATA
+	그래픽 포맷 : JPEG, TIFF, GIF
+	동영상 포맷 : MPEG, Quicktime
+	음악 포맷   : MIDI, MP3
+	텍스트 포맷 : ASCII, EBCDIC
+
+5계층(Session, 세션계층) : 네트워크 연결을 성립, 제어, 종료
+	PDU : DATA
+	각각의 알맞은 애플리케이션으로 데이터를 보내기 위해 DATA를 분리해서 유지
+	OS
+
+4계층(Trasport, 전송계층) : 발신지대 목적지간 제어 및 에러관리, 포트주소로 서비스 구분
+	PDU : Segment
+	신뢰성 있는 통신을 보장하기 위함
+	TCP(Transmisstion Control Protocol) : 3-way-handshake
+	UDP(User Datagram Protocol)
+
+3계층(Network, 네트워크계층) : 최적경로를 찾음, IP(논리주소)는 도착까지 변하지 않음
+	PDU : Packet
+	IP, ARP(Address Resolution Protocol, IP주소로 MAC주소를 찾아줌),
+	RARP(Reverse ARP), ICMP(Internet Control message Protocol, 오류에 관한 처리)
+
+2계층(Datalink, 데이터링크계층) : 물리구간 연결, Data의 물리적 접속, 에러검출, 흐름제어
+	PDU : Frame
+	경유지마다 mac주소가 변함
+	HDLC, PPP, Frame-relay, FDDI, ATM
+
+1계층(Physical, 물리계층) : DATA와 전기신호간의 전환
+	PDU : 0,1 - bit
+	
+
+//IP주소체계(IPv4)
+			기본SubnetMask	사설IP범위
+A Class	: 1~126(127)	255.0.0.0	10.0.0.0 ~ 10.255.255.255
+B Class : 128~191	255.255.0.0	172.16.0.0 ~ 172.31.255.255		
+C Class : 192~223	255.255.255.0	192.168.0.0 ~ 192.168.255.255			
+----------------------------------------------------------------------
+D Class : 224~239	multicast
+E Class : 240~254	연구용
+
+네트워크부분 + 호스트부분 => 한 네트워크 상에서 호스트 부분은 모두 달라야 함
+
+네트워크 : 라우터없이 통신이 가능한 하나의 브로드캐스트영역
+
+IP주소의 종류 : 공인IP, 사설IP, Loopback IP, Unspecified IP
+
+* 사용가능한 IP주소 중에서 가장 첫자리는 네트워크 주소, 마지막자리는 브로드 캐스트
+192.168.0.0/24      네트워크주소 : 192.168.0.0
+                    브로드캐스트주소 : 192.168.0.255
+
+
+//Subnet Mask(<=>)Summary(Supernet)
+브로드캐스트 영역을 나누고 IP주소를 효율적으로 사용하기 위해 사용자의 선택에 의해
+네트워크를 나누는 것.
+
+ex) 87.30.1.1/11의 IP 일곱번째 네트워크를 사용하는 팀에서 추가로 70개의 네트워크가 필요함
+    그 중 58번째 네트워크의 500번째 IP는?
+        1111 1111   1110 0000   0000 0000   0000 0000
+	xxxx xxxx | xxxx xxxx | xxxx xxxx | xxxx xxxx
+		  | 1100 1110 | 0100 0001 | 1111 0011
+	   87	        206         65          243

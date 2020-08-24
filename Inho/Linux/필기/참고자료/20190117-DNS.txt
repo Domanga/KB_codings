@@ -1,0 +1,58 @@
+//DNS설치(named)
+1. named 설치 (bind, bind-util)
+yum -y install bind-*
+
+2. named 설정 
+vi /etc/named.conf
+13         listen-on port 53 { any; };		//수정
+14         listen-on-v6 port 53 { none; };	//수정
+21         allow-query     { any; };		//수정
+
+3. zone파일 관련 설정
+vi /etc/named.rfc1912.zones
+     43 zone "rpgmaster.com" IN {
+     44         type master;
+     45         file "rpgmaster.com.zone";
+     46         allow-update { none; };
+     47 };
+     48
+     49 zone "0.168.192.in-addr.arpa" IN {
+     50         type master;
+     51         file "rpgmaster.com.rev";
+     52         allow-update { none; };
+     53 };
+
+
+4. 정방향/역방향 파일 만들기
+cd /var/named
+cp named.localhost rpgmaster.com.zone
+cp named.localhost rpgmaster.com.rev
+
+vi rpgmaster.com.zone
+$TTL 1D
+@       IN SOA  @ rpgmaster.com. (
+                                        0       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+        NS      rpgmaster.com.
+        A       192.168.0.250
+www     A       192.168.0.250
+vi rpgmaster.com.rev
+$TTL 1D
+@       IN SOA  rpgmaster.com.          rpgmaster.com.(
+                                        0       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+        NS      rpgmaster.com.
+250     PTR     rpgmaster.com.
+
+cd /var/named/
+chown named.named ./rpgmaster.com.rev
+chown named.named ./rpgmaster.com.zone
+
+systemctl start named
+

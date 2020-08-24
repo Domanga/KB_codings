@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Hansoo() {
+            var digit = String(input).length;
+            var stringInput = String(input);
+            if (digit <= 2) {
+                return true;
+            } else {
+                var diff = 0;
+                var previous = 0;
+                for (var i = 0; i < digit - 1; i++) {
+                    diff = Number(stringInput[i]) - Number(stringInput[i + 1]);
+                    if (i == 0) {
+                        previous = diff;
+                    } else {
+                        if (diff != previous)
+                            return false;
+                        else
+                            previous = diff;
+                    }
+                }
+                if (diff != previous)
+                    return false;
+                else
+                    return true;
+            }
+        }
+
+        var inputNumber = prompt('숫자를 입력하시오.', '');
+        var count = 0;
+        for (var i = 1; i <= inputNumber; i++) {
+            if (Hansoo(i))
+                count++;
+        }
+        alert(count);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

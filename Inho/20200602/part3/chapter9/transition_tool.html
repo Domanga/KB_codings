@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            /* background-image: url('photo.jpg'); */
+            /* background-size: 100% 100%; */
+            transition-property: width, background-color, border-radius;
+            transition-duration: 5s, 4s, 3s;
+        }
+        .wrap:hover>.box{
+            width: 500px;
+            background-color: blue;
+            /* background-image: url('tropical.jpg'); */
+            opacity: 0.4;
+            border-radius: 50px;
+        }
+        .box:nth-child(1) {transition-timing-function: linear;}
+        .box:nth-child(2){transition-timing-function: ease;}
+        .box:nth-child(3){transition-timing-function: ease-in;}
+        .box:nth-child(4){transition-timing-function: ease-out;}
+        .box:nth-child(5){transition-timing-function: ease-in-out;}
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

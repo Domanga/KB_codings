@@ -1,0 +1,88 @@
+//jdk - tomcat
+tomcat은 자바로 작성되어 있어 jdk가 필수!!
+
+1. jdk 다운로드
+https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html
+중간꺼에 3번째줄 다운로드
+
+2. ftp를 이용해 복사
+복사후 /root/src로 이동
+mv jdk-11.0.2_linux-x64_bin.tar.gz /root/src
+/root/src디렉터리에서 압축해제
+cd /root/src
+tar zxvf jdk-11.0.2_linux-x64_bin.tar.gz
+
+3. /server/local/디렉터리 생성후 압축을 해제한 디렉터리를 삭제
+mkdir /server/local
+mv -v jdk-11.0.2 /server/local
+
+4. 어느위치에서나 누구나 실행될 수 있도록 환경변수 등록
+vi /etc/profile
+ #JAVA
+     82 export JAVA_HOME=/server/local/jdk-11.0.2
+     83 export PATH=$PATH:$JAVA_HOME/bin
+     84 export CLASSPATH=.:$JAVA_HOME/lib/tools.jar
+
+source /etc/profile
+
+5. 자바테스트(HelloWorld, 실행안됨)
+vi Hello.java
+public class Hello{
+	public static void main(String[] args){
+		System.out.println("Hello world");
+	}
+}
+
+javac Hello.java
+java Hello
+
+
+//tomcat설치
+1. 다운로드
+wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.33/bin/apache-tomcat-8.5.33.tar.gz
+
+2. 압축해제
+tar zxvf apache-tomcat-8.5.33.tar.gz
+
+3. 압축을 해제해 생성된 디렉터리를 /server/local디렉터리로 이동
+mv apache-tomcat-8.5.33 /server/local/
+
+4. 이동시킨 디렉터리 이름을 사용하기 편하게 변경
+mv apache-tomcat-8.5.33/ tomcat
+
+5. 환경변수 등록
+vi /etc/profile
+#tomcat
+export CATALINA_HOME=/server/local/tomcat
+
+source /etc/profile
+
+6. 톰캣 환경설정
+vi /server/local/tomcat/conf/server.xml
+69 <Connector port="8080" protocol="HTTP/1.1"
+70            URIEncoding="UTF-8"
+71            connectionTimeout="20000"
+72            redirectPort="8443" />
+
+7. 톰캣 실행(/server/local/tomcat/bin)
+./startup.sh
+
+8. 서비스등록
+vi /usr/lib/systemd/system/tomcat.service
+[Unit]
+Description=tomcat8
+After=network.target syslog.target
+
+[Service]
+Type=forking
+
+Environment=JAVA_HOME=/server/local/jdk-11.0.2
+User=root
+Group=root
+
+ExecStart=/server/local/tomcat/bin/startup.sh
+ExecStop=/server/local/tomcat/bin/shutdown.sh
+
+UMask=0007
+RestartSec=10
+Restart=always

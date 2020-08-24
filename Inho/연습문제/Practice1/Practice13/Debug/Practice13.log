@@ -1,0 +1,4 @@
+﻿  question_13.c
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice1\Practice13\question_13.c(12,15): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice1\Practice13\question_13.c(9,1): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Practice13.vcxproj -> C:\Users\KB\Documents\Git\2020JavaSmartWebApp_3\정인호\연습문제\Practice1\Debug\Practice13.exe

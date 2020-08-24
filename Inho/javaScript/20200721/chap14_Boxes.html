@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('div').filter(function (index) {
+                return index % 3 == 0;
+            }).css({
+                width: '75px',
+                height: '75px',
+                color: 'blue',
+                backgroundColor: 'aqua',
+                float: 'left',
+                margin: '20px',
+                border: '3px solid black'
+            });
+            $('div').filter(function (index) {
+                return index % 3 != 0;
+            }).css({
+                width: '75px',
+                height: '75px',
+                color: 'blue',
+                backgroundColor: 'aqua',
+                float: 'left',
+                margin: '20px'
+            });
+            $('div').filter(function (index) {
+                return index % 3 == 0;
+            }).addClass('box border_box');
+            $('div').filter(function (index) {
+                return index % 3 != 0;
+            }).addClass('box');
+        });
+    </script>
+
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
