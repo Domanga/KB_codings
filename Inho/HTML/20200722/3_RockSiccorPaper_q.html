@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        var myChoice = Number(prompt('가위, 바위, 보!', '')); //0=가위, 1=바위, 2=보
+        var computerChoice = Math.floor(Math.random() * 3);
+        switch (myChoice) {
+            case 0:
+                switch (computerChoice) {
+                    case 0:
+                        alert('비김');
+                        break;
+                    case 1:
+                        alert('짐');
+                        break;
+                    case 2:
+                        alert('이김');
+                        break;
+                }
+                break;
+            case 1:
+                switch (computerChoice) {
+                    case 0:
+                        alert('이김');
+                        break;
+                    case 1:
+                        alert('비김');
+                        break;
+                    case 2:
+                        alert('짐');
+                        break;
+                }
+                break;
+            case 2:
+                switch (computerChoice) {
+                    case 0:
+                        alert('짐');
+                        break;
+                    case 1:
+                        alert('이김');
+                        break;
+                    case 2:
+                        alert('비김');
+                        break;
+                }
+                break;
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

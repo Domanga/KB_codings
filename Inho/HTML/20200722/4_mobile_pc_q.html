@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">          
+    <script>
+        var pc_device = "win16|win32|win64|mac|macintel";
+
+        var this_device = navigator.platform;
+
+        if (this_device) {
+
+            if (pc_device.indexOf(navigator.platform.toLowerCase()) > 0) {
+                alert('pc 페이지로 이동합니다.');
+                location = 'http://naver.co.kr';
+            } else {
+                alert('모바일 페이지로 이동합니다.');
+                location = 'http://m.naver.co.kr';
+            }
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

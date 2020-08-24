@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function Student(name, number, gender) {
+            this.이름 = name;
+            this.학번 = number;
+            this.성별 = gender;
+        }
+
+        Student.prototype.toString = function () {
+            return '이름 : ' + this.이름 +
+                  ' 학번 : ' + this.학번 +
+                  ' 성별 : ' + this.성별;
+        }
+
+        var array = [];
+
+        array.push(new Student('이동준', 2009038033, '남'));
+        array.push(new Student('안혜주', 2020038011, '여'));
+        array.push(new Student('고한솔', 2015012011, '남'));
+        array.push(new Student('안희령', 2017011023, '여'));
+
+        array.push(new Student('신동민', 2011047055, '남'));
+        array.push(new Student('정인호', 2013013454, '남'));
+
+        var output = '';
+
+        for (var index in array) {
+            output += array[index] + '\n';
+        }
+
+        alert(output);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

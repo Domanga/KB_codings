@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFX_test.Car.Controller">
+   <children>
+      <SplitPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="8.0" layoutY="82.0" text="차량 모델" />
+                  <Label layoutX="8.0" layoutY="117.0" text="차량 번호" />
+                  <Label layoutX="8.0" layoutY="151.0" text="차량 색상" />
+                  <MenuBar layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="598.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <TextField id="i_model" fx:id="i_model" layoutX="80.0" layoutY="78.0" />
+                  <TextField id="i_number" fx:id="i_number" layoutX="80.0" layoutY="113.0" />
+                  <TextField id="i_color" fx:id="i_color" layoutX="80.0" layoutY="147.0" />
+                  <Button id="enter_btn" fx:id="enter_btn" layoutX="80.0" layoutY="181.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="84.0" text="입차" />
+                  <Label layoutX="300.0" layoutY="118.0" text="차량 번호" />
+                  <Label layoutX="300.0" layoutY="83.0" text="차량 모델" />
+                  <TextField id="o_number" fx:id="o_number" layoutX="388.0" layoutY="113.0" />
+                  <TextField id="o_model" fx:id="o_model" layoutX="388.0" layoutY="78.0" />
+                  <Button id="out_btn" fx:id="out_btn" layoutX="420.0" layoutY="181.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="75.0" text="출차" />
+                  <Button id="cur_parking_btn" fx:id="parking_btn" layoutX="249.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="주차 현황" />
+                  <TextArea id="parking_stat" fx:id="parking_stat" layoutX="15.0" layoutY="249.0" prefHeight="233.0" prefWidth="568.0" />
+                  <Button fx:id="db_conncetion" layoutX="259.0" layoutY="34.0" mnemonicParsing="false" text="DB연결하기" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
