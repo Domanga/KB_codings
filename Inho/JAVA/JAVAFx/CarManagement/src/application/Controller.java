@@ -3,6 +3,8 @@ package application;
 import java.net.URL;
 import java.util.*;
 
+
+import java.util.Random;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -55,7 +57,9 @@ public class Controller implements Initializable {
 	int Charge;
 	
 	SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
+	
+	DTO dto = new DTO();
+	
 	public void initialize(URL location, ResourceBundle resources) {
 
 		floor.setItems(list);
@@ -65,7 +69,12 @@ public class Controller implements Initializable {
 
 			@Override
 			public void handle(ActionEvent arg0) {
-
+				
+				Random rand = new Random();
+				int random = rand.nextInt(50) + 1;
+				System.out.println(String.valueOf(random));
+				enter_btn.setText(String.valueOf(random));
+				
 				String model = i_model.getText();
 				String number = i_number.getText();
 				String color = i_color.getText();
@@ -163,23 +172,6 @@ public class Controller implements Initializable {
 			}
 		});
 
-//		parking_btn.setOnAction(new EventHandler<ActionEvent>() {
-//
-//			@Override
-//			public void handle(ActionEvent arg0) {
-//
-//				Alert alert = new Alert(AlertType.INFORMATION);
-//				alert.setTitle("현재 주차 상태");
-//				alert.setHeaderText("현재 주차 상태를 확인합니다.");
-//				alert.setContentText("주차된 차량들을 출력하시겠습니까?");
-//				alert.showAndWait().ifPresent(ra -> {
-//					if (ra == ButtonType.OK) {
-//						printCarStatement(sql_stat, parking_stat);
-//					}
-//				});
-//			}
-//		});
-
 		db_conncetion.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
@@ -191,13 +183,16 @@ public class Controller implements Initializable {
 				alert.showAndWait().ifPresent(ra -> {
 					if (ra == ButtonType.OK) {
 						try {
-							Class.forName("com.mysql.cj.jdbc.Driver");
-							String url = "jdbc:mysql://localhost/" + dbname
-									+ "?serverTimezone=UTC&allowPublicKeyRetrieval=true" + "&useSSL=false";
-							conn = DriverManager.getConnection(url, "root", "0506");
-							System.out.println("주차시스템 연동 시작");
-
-							stmt = conn.createStatement();
+//							Class.forName("com.mysql.cj.jdbc.Driver");
+//							String url = "jdbc:mysql://localhost/" + dbname
+//									+ "?serverTimezone=UTC&allowPublicKeyRetrieval=true" + "&useSSL=false";
+//							conn = DriverManager.getConnection(url, "root", "0506");
+//							System.out.println("주차시스템 연동 시작");
+//
+//							stmt = conn.createStatement();
+							
+//							DAO Car = new DAO();
+//							Car.add(dto);
 
 							printCarStatement(sql_stat, parking_stat);
 							printCarLog(sql_log, history);

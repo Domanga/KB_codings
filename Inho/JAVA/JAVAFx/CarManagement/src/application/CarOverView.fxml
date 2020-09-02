@@ -6,44 +6,84 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
-   <children>
-      <SplitPane prefHeight="800.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="708.0" prefWidth="798.0" style="-fx-background-color: #CCFFFF;" SplitPane.resizableWithParent="false">
-               <children>
-                  <Label layoutX="14.0" layoutY="84.0" text="차량 모델" textFill="#141414" />
-                  <Label layoutX="14.0" layoutY="119.0" text="차량 번호" textFill="#141414" />
-                  <Label layoutX="14.0" layoutY="153.0" text="차량 색상" textFill="#141414" />
-                  <TextField id="i_model" fx:id="i_model" layoutX="73.0" layoutY="81.0" prefHeight="23.0" prefWidth="110.0" />
-                  <TextField id="i_number" fx:id="i_number" layoutX="73.0" layoutY="116.0" prefHeight="23.0" prefWidth="110.0" />
-                  <TextField id="i_color" fx:id="i_color" layoutX="73.0" layoutY="150.0" prefHeight="23.0" prefWidth="110.0" />
-                  <Button id="enter_btn" fx:id="enter_btn" layoutX="86.0" layoutY="183.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="84.0" text="입차" />
-                  <Label layoutX="327.0" layoutY="120.0" text="차량 번호" textFill="#141414" />
-                  <Label layoutX="327.0" layoutY="85.0" text="차량 모델" textFill="#141414" />
-                  <TextField id="o_model" fx:id="o_model" layoutX="384.0" layoutY="81.0" prefHeight="23.0" prefWidth="110.0" />
-                  <TextField id="o_number" fx:id="o_number" layoutX="384.0" layoutY="116.0" prefHeight="23.0" prefWidth="110.0" />
-                  <Button id="out_btn" fx:id="out_btn" layoutX="373.0" layoutY="183.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="75.0" text="출차" />
-                  <TextArea id="parking_stat" fx:id="parking_stat" layoutX="20.0" layoutY="239.0" prefHeight="293.0" prefWidth="390.0" />
-                  <Button fx:id="db_conncetion" layoutX="692.0" layoutY="14.0" mnemonicParsing="false" text="DB연결하기" />
-                  <ComboBox fx:id="floor" layoutX="190.0" layoutY="149.0" onAction="#comboChanged" prefHeight="23.0" prefWidth="15.0" />
-                  <Label layoutX="560.0" layoutY="85.0" text="차량 모델" textFill="#141414" />
-                  <Label layoutX="560.0" layoutY="120.0" text="차량 번호" textFill="#141414" />
-                  <Label layoutX="560.0" layoutY="154.0" prefHeight="15.0" prefWidth="52.0" text="층 수" textAlignment="CENTER" textFill="#141414" />
-                  <TextField fx:id="s_model" layoutX="622.0" layoutY="81.0" prefHeight="23.0" prefWidth="110.0" />
-                  <TextField fx:id="s_number" layoutX="622.0" layoutY="116.0" prefHeight="23.0" prefWidth="110.0" />
-                  <ComboBox fx:id="s_floor" layoutX="652.0" layoutY="150.0" onAction="#comboChanged_1" prefHeight="23.0" prefWidth="15.0" />
-                  <Button fx:id="search_btn" layoutX="607.0" layoutY="183.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="90.0" text="조회하기" />
-                  <TextArea fx:id="parking_search" layoutX="417.0" layoutY="239.0" prefHeight="293.0" prefWidth="361.0" />
-                  <TextArea fx:id="history" layoutX="20.0" layoutY="544.0" prefHeight="240.0" prefWidth="757.0" />
-                  <Label layoutX="317.0" layoutY="19.0" text="Easy Parking" textFill="#2ca400">
-                     <font>
-                        <Font name="Berlin Sans FB" size="32.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0"
+	prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.Controller">
+	<children>
+		<SplitPane prefHeight="800.0" prefWidth="800.0"
+			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<items>
+				<AnchorPane minHeight="0.0" minWidth="0.0"
+					prefHeight="708.0" prefWidth="798.0"
+					style="-fx-background-color: #CCFFFF;"
+					SplitPane.resizableWithParent="false">
+					<children>
+						<Label layoutX="14.0" layoutY="84.0" text="차량 모델"
+							textFill="#141414" />
+						<Label layoutX="14.0" layoutY="119.0" text="차량 번호"
+							textFill="#141414" />
+						<Label layoutX="14.0" layoutY="153.0" text="차량 색상"
+							textFill="#141414" />
+						<TextField id="i_model" fx:id="i_model" layoutX="73.0"
+							layoutY="81.0" prefHeight="23.0" prefWidth="110.0" />
+						<TextField id="i_number" fx:id="i_number" layoutX="73.0"
+							layoutY="116.0" prefHeight="23.0" prefWidth="110.0" />
+						<TextField id="i_color" fx:id="i_color" layoutX="73.0"
+							layoutY="150.0" prefHeight="23.0" prefWidth="110.0" />
+						<Button id="enter_btn" fx:id="enter_btn" layoutX="86.0"
+							layoutY="183.0" mnemonicParsing="false" prefHeight="23.0"
+							prefWidth="84.0" text="입차" />
+						<Label layoutX="327.0" layoutY="120.0" text="차량 번호"
+							textFill="#141414" />
+						<Label layoutX="327.0" layoutY="85.0" text="차량 모델"
+							textFill="#141414" />
+						<TextField id="o_model" fx:id="o_model" layoutX="384.0"
+							layoutY="81.0" prefHeight="23.0" prefWidth="110.0" />
+						<TextField id="o_number" fx:id="o_number"
+							layoutX="384.0" layoutY="116.0" prefHeight="23.0"
+							prefWidth="110.0" />
+						<Button id="out_btn" fx:id="out_btn" layoutX="373.0"
+							layoutY="183.0" mnemonicParsing="false" prefHeight="23.0"
+							prefWidth="75.0" text="출차" />
+						<TextArea id="parking_stat" fx:id="parking_stat"
+							layoutX="20.0" layoutY="239.0" prefHeight="293.0"
+							prefWidth="390.0" />
+						<Button fx:id="db_conncetion" layoutX="692.0"
+							layoutY="14.0" mnemonicParsing="false" text="DB연결하기" />
+						<ComboBox fx:id="floor" layoutX="190.0" layoutY="149.0"
+							onAction="#comboChanged" prefHeight="23.0" prefWidth="15.0" />
+						<Label layoutX="560.0" layoutY="85.0" text="차량 모델"
+							textFill="#141414" />
+						<Label layoutX="560.0" layoutY="120.0" text="차량 번호"
+							textFill="#141414" />
+						<Label layoutX="560.0" layoutY="154.0" prefHeight="15.0"
+							prefWidth="52.0" text="층 수" textAlignment="CENTER"
+							textFill="#141414" />
+						<TextField fx:id="s_model" layoutX="622.0"
+							layoutY="81.0" prefHeight="23.0" prefWidth="110.0" />
+						<TextField fx:id="s_number" layoutX="622.0"
+							layoutY="116.0" prefHeight="23.0" prefWidth="110.0" />
+						<ComboBox fx:id="s_floor" layoutX="652.0" layoutY="150.0"
+							onAction="#comboChanged_1" prefHeight="23.0" prefWidth="15.0" />
+						<Button fx:id="search_btn" layoutX="607.0" layoutY="183.0"
+							mnemonicParsing="false" prefHeight="23.0" prefWidth="90.0"
+							text="조회하기" />
+						<TextArea fx:id="parking_search" layoutX="417.0"
+							layoutY="239.0" prefHeight="293.0" prefWidth="361.0" />
+						<TextArea fx:id="history" layoutX="20.0" layoutY="544.0"
+							prefHeight="240.0" prefWidth="757.0" />
+						<Label layoutX="317.0" layoutY="19.0" text="Easy Parking"
+							textFill="#2ca400">
+							<font>
+								<Font name="Berlin Sans FB" size="32.0" />
+							</font>
+						</Label>
+					</children>
+				</AnchorPane>
+			</items>
+		</SplitPane>
+	</children>
 </AnchorPane>

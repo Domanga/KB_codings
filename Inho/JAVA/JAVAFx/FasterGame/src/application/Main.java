@@ -8,15 +8,14 @@ import javafx.scene.Scene;
 
 
 public class Main extends Application {
-	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("CarOverView.fxml"));
-			primaryStage.setTitle("주차 관리 프로그램");
+			Parent root = FXMLLoader.load(getClass().getResource("GameScreen.fxml"));
+			primaryStage.setTitle("Faster");
 			primaryStage.setScene(new Scene(root));
 			primaryStage.show();
-		} catch (Exception e) {
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
