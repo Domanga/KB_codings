@@ -3,16 +3,21 @@ package application;
 import java.net.URL;
 import java.util.*;
 
+import javafx.util.Duration;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 import java.util.Random;
 
@@ -32,17 +37,24 @@ public class Controller implements Initializable {
 
 	int count = 1;
 
+	public boolean isPause = false;
+	
 	public Button[] click_btn = new Button[25];
 	int random[] = new int[25];
 	int after[] = new int[25];
-	int index1[] = new int[25];
 	Random rand = new Random();
-	Random rand1 = new Random();
-	int flag = 1;
+
+	private Timeline timeLine;
+	private DoubleProperty timeSeconds = new SimpleDoubleProperty();
+	private Duration time1 = Duration.ZERO;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
+
+		timeLine = new Timeline(); // timeLine 객체 초기화
+		timeLine.setCycleCount(Timeline.INDEFINITE);
+		timeLine.play();
 
 		start_btn.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -50,6 +62,15 @@ public class Controller implements Initializable {
 			public void handle(ActionEvent arg0) {
 				setNumber();
 				count = 1;
+				
+				for(int i=0;i<25;i++) {
+					click_btn[i].setVisible(true);
+				}
+				
+				timeLine.stop();
+				time1 = Duration.ZERO;
+				time.textProperty().bind(timeSeconds.asString());
+
 				for (int i = 0; i < 25; i++) {
 
 					after[i] = rand.nextInt(25) + 26;
@@ -61,26 +82,33 @@ public class Controller implements Initializable {
 					}
 				}
 				if (count < 51) {
-					Timer timer = new Timer();
-					TimerTask task = new TimerTask() {
-						int sec = 0;
 
+					timeLine = new Timeline(new KeyFrame(Duration.millis(10), new EventHandler<ActionEvent>() {
 						@Override
-						public void run() {
-							// TODO Auto-generated method stub
-							try {
-								sec++;
-//						System.out.println(String.valueOf(sec));
-//						String second = String.valueOf(sec);
-								text_time.setText(String.valueOf(sec));
-//						System.out.println(String.valueOf(sec));
-							} catch (Exception e) {
-								e.printStackTrace();
-							}
+						public void handle(ActionEvent t) {
+							Duration duration = ((KeyFrame) t.getSource()).getTime();
+							time1 = time1.add(duration);
+							timeSeconds.set(time1.toSeconds());
 						}
+					}));
+					timeLine.setCycleCount(Timeline.INDEFINITE);
+					timeLine.play();
+				}
 
-					};
-					timer.schedule(task, 1000, 1000);
+			}
+		});
+		pause_btn.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				
+				if(!isPause) {
+					timeLine.pause();
+					isPause = true;
+				}
+				else {
+					timeLine.play();
+					isPause = false;
 				}
 			}
 		});
@@ -88,37 +116,27 @@ public class Controller implements Initializable {
 
 	public void onClick(ActionEvent event) {
 		if (count == Integer.parseInt(((Button) event.getSource()).getText())) {
-
+			
 			String id = ((Button) event.getSource()).getId();
 			int index = Integer.parseInt(id.substring(4));
-//			if (flag == 1) {
-//				for (int i = 0; i < 25; i++) {
-//
-//					after[i] = rand.nextInt(25) + 26;
-//					for (int j = 0; j < i; j++) {
-//						if (after[i] == (after[j])) {
-//							i--;
-//							break;
-//						}
-//					}
-//
-////					click_btn[index - 1].setText(String.valueOf(after[i]));
-//				}
-//			}
+
 			if (count < 26) {
 				click_btn[index - 1].setText(String.valueOf(after[count - 1]));
 			} else {
 				click_btn[index - 1].setVisible(false);
 			}
-			for (int i = 0; i < 25; i++) {
-				System.out.print(after[i] + " ");
-			}
-			System.out.println();
 			count++;
-			flag = 2;
 
 		} else {
 			System.out.println("다시 고르셈" + String.valueOf(count));
+		}
+		if (count == 51) {
+			timeLine.stop();
+			 Alert alert = new Alert(AlertType.INFORMATION);
+             alert.setTitle("클리어!");
+             alert.setContentText("축하합니다.");
+             alert.setHeaderText(null);
+             alert.show();
 		}
 	}
 
@@ -158,13 +176,8 @@ public class Controller implements Initializable {
 					break;
 				}
 			}
-
 			click_btn[i].setText(String.valueOf(random[i]));
 		}
 
-		for (int i = 0; i < 25; i++) {
-			System.out.print(random[i] + " ");
-		}
-		System.out.println();
 	}
 }

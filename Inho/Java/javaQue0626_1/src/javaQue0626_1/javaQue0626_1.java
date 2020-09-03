@@ -1,5 +1,6 @@
 package javaQue0626_1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 class alphabet {
@@ -43,20 +44,39 @@ public class javaQue0626_1 {
 	public static void main(String args[]) {
 
 		String word = "";
+		String N;
+		int[] alpha = new int[26];
+		//Arrays.fill(alpha, -1);		
+		Scanner ss = new Scanner(System.in);
+		N = ss.nextLine();
+		
+		
+		
+		for (int i = 0; i < N.length(); i++) {
+			int index = N.charAt(i) - 97;
+			alpha[index]++;
 
-		System.out.print("문자열을 입력하시오. : ");
-		Scanner scan = new Scanner(System.in);
-		word = scan.nextLine();
+		}
 
-		// char[] conts = new char[26];
-		// int[] count = new int[26];
-
-		alphabet a = new alphabet();
-
-		a.Setconts(a);
-		a.Setcounts(a, word);
-
-		a.printalpha(a);
+		for (int i = 0; i < 26; i++) {
+			if (alpha[i] != 0) {
+				System.out.println((char)(i+97)+""+alpha[i] + " " + i);
+			}
+		}
+		
+//		System.out.print("문자열을 입력하시오. : ");
+//		Scanner scan = new Scanner(System.in);
+//		word = scan.nextLine();
+//
+//		// char[] conts = new char[26];
+//		// int[] count = new int[26];
+//
+//		alphabet a = new alphabet();
+//
+//		a.Setconts(a);
+//		a.Setcounts(a, word);
+//
+//		a.printalpha(a);
 
 		/*
 		 * char[] conts = new char[26]; int[] count = new int[26];
