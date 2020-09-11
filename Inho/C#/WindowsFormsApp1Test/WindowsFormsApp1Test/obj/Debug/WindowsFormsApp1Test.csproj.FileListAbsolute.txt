@@ -1,0 +1,10 @@
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\WindowsFormsApp1Test\WindowsFormsApp1Test\bin\Debug\WindowsFormsApp1Test.exe.config
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\WindowsFormsApp1Test\WindowsFormsApp1Test\bin\Debug\WindowsFormsApp1Test.exe
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\WindowsFormsApp1Test\WindowsFormsApp1Test\bin\Debug\WindowsFormsApp1Test.pdb
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\WindowsFormsApp1Test\WindowsFormsApp1Test\obj\Debug\WindowsFormsApp1Test.csprojAssemblyReference.cache
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\WindowsFormsApp1Test\WindowsFormsApp1Test\obj\Debug\WindowsFormsApp1Test.Properties.Resources.resources
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\WindowsFormsApp1Test\WindowsFormsApp1Test\obj\Debug\WindowsFormsApp1Test.csproj.GenerateResource.cache
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\WindowsFormsApp1Test\WindowsFormsApp1Test\obj\Debug\WindowsFormsApp1Test.csproj.CoreCompileInputs.cache
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\WindowsFormsApp1Test\WindowsFormsApp1Test\obj\Debug\WindowsFormsApp1Test.exe
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\WindowsFormsApp1Test\WindowsFormsApp1Test\obj\Debug\WindowsFormsApp1Test.pdb
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\WindowsFormsApp1Test\WindowsFormsApp1Test\obj\Debug\WindowsFormsApp1Test.Form1.resources

@@ -1,0 +1,13 @@
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\bin\Debug\netcoreapp3.1\TEST.exe
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\bin\Debug\netcoreapp3.1\TEST.deps.json
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\bin\Debug\netcoreapp3.1\TEST.runtimeconfig.json
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\bin\Debug\netcoreapp3.1\TEST.runtimeconfig.dev.json
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\bin\Debug\netcoreapp3.1\TEST.dll
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\bin\Debug\netcoreapp3.1\TEST.pdb
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\obj\Debug\netcoreapp3.1\TEST.csprojAssemblyReference.cache
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\obj\Debug\netcoreapp3.1\TEST.AssemblyInfoInputs.cache
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\obj\Debug\netcoreapp3.1\TEST.AssemblyInfo.cs
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\obj\Debug\netcoreapp3.1\TEST.csproj.CoreCompileInputs.cache
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\obj\Debug\netcoreapp3.1\TEST.dll
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\obj\Debug\netcoreapp3.1\TEST.pdb
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\TEST\TEST\obj\Debug\netcoreapp3.1\TEST.genruntimeconfig.cache

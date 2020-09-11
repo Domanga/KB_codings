@@ -28,7 +28,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button id="btn" fx:id="btn_1" layoutX="40.0" layoutY="137.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" stylesheets="@application.css" text="1" textAlignment="CENTER" textFill="WHITE">
+                  <Button fx:id="btn_1" layoutX="40.0" layoutY="137.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" stylesheets="@application.css" text="1" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -36,7 +36,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_2" layoutX="125.0" layoutY="137.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="2" textFill="WHITE">
+                  <Button fx:id="btn_2" layoutX="125.0" layoutY="137.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="2" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -44,7 +44,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_3" layoutX="210.0" layoutY="137.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="3" textFill="WHITE">
+                  <Button fx:id="btn_3" layoutX="210.0" layoutY="137.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="3" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -52,7 +52,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_4" layoutX="295.0" layoutY="137.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="4" textFill="WHITE">
+                  <Button fx:id="btn_4" layoutX="295.0" layoutY="137.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="4" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -60,7 +60,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_5" layoutX="380.0" layoutY="137.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="5" textFill="WHITE">
+                  <Button fx:id="btn_5" layoutX="380.0" layoutY="137.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="5" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -68,7 +68,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_6" layoutX="40.0" layoutY="222.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="6" textFill="WHITE">
+                  <Button fx:id="btn_6" layoutX="40.0" layoutY="222.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="6" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -76,7 +76,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_7" layoutX="125.0" layoutY="222.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="7" textFill="WHITE">
+                  <Button fx:id="btn_7" layoutX="125.0" layoutY="222.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="7" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -84,7 +84,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_8" layoutX="209.0" layoutY="222.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="8" textFill="WHITE">
+                  <Button fx:id="btn_8" layoutX="209.0" layoutY="222.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="8" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -92,7 +92,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_9" layoutX="295.0" layoutY="222.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="9" textFill="WHITE">
+                  <Button fx:id="btn_9" layoutX="295.0" layoutY="222.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="9" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -100,7 +100,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_10" layoutX="380.0" layoutY="222.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="10" textFill="WHITE">
+                  <Button fx:id="btn_10" layoutX="380.0" layoutY="222.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="10" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -108,7 +108,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_11" layoutX="40.0" layoutY="307.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="11" textFill="WHITE">
+                  <Button fx:id="btn_11" layoutX="40.0" layoutY="307.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="11" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -116,7 +116,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_12" layoutX="125.0" layoutY="307.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="12" textFill="WHITE">
+                  <Button fx:id="btn_12" layoutX="125.0" layoutY="307.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="12" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -124,7 +124,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_13" layoutX="210.0" layoutY="307.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="13" textFill="WHITE">
+                  <Button fx:id="btn_13" layoutX="210.0" layoutY="307.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="13" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -132,7 +132,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_14" layoutX="295.0" layoutY="307.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="14" textFill="WHITE">
+                  <Button fx:id="btn_14" layoutX="295.0" layoutY="307.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="14" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -140,7 +140,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_15" layoutX="380.0" layoutY="307.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="15" textFill="WHITE">
+                  <Button fx:id="btn_15" layoutX="380.0" layoutY="307.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="15" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -148,7 +148,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_16" layoutX="40.0" layoutY="392.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="16" textFill="WHITE">
+                  <Button fx:id="btn_16" layoutX="40.0" layoutY="392.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="16" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -156,7 +156,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_17" layoutX="125.0" layoutY="392.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="17" textFill="WHITE">
+                  <Button fx:id="btn_17" layoutX="125.0" layoutY="392.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="17" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -164,7 +164,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_18" layoutX="210.0" layoutY="392.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="18" textFill="WHITE">
+                  <Button fx:id="btn_18" layoutX="210.0" layoutY="392.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="18" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -172,7 +172,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_19" layoutX="295.0" layoutY="392.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="19" textFill="WHITE">
+                  <Button fx:id="btn_19" layoutX="295.0" layoutY="392.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="19" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -180,7 +180,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_20" layoutX="380.0" layoutY="392.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="20" textFill="WHITE">
+                  <Button fx:id="btn_20" layoutX="380.0" layoutY="392.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="20" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -188,7 +188,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_21" layoutX="40.0" layoutY="477.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="21" textFill="WHITE">
+                  <Button fx:id="btn_21" layoutX="40.0" layoutY="477.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="21" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -196,7 +196,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_22" layoutX="125.0" layoutY="477.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="22" textFill="WHITE">
+                  <Button fx:id="btn_22" layoutX="125.0" layoutY="477.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="22" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -204,7 +204,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_23" layoutX="210.0" layoutY="477.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="23" textFill="WHITE">
+                  <Button fx:id="btn_23" layoutX="210.0" layoutY="477.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="23" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -212,7 +212,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_24" layoutX="295.0" layoutY="477.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="24" textFill="WHITE">
+                  <Button fx:id="btn_24" layoutX="295.0" layoutY="477.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="24" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -220,7 +220,7 @@
                         <SepiaTone />
                      </effect>
                   </Button>
-                  <Button id="btn" fx:id="btn_25" layoutX="380.0" layoutY="477.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="25" textFill="WHITE">
+                  <Button fx:id="btn_25" layoutX="380.0" layoutY="477.0" mnemonicParsing="false" onAction="#onClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #000000;" text="25" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
