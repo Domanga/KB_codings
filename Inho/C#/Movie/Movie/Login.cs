@@ -13,8 +13,31 @@ namespace Movie
 {
     public partial class Login : Form
     {
+        MySqlConnection connection;
+        MySqlCommand cmd;
+        MySqlDataReader rdr;
+        static int isCon = 0;
+        static int islogin1 = 0;
+        public class islogin
+        {
+            private int islog = 0;
+            public islogin()
+            {
+
+            }
+            public void setislogin(int login)
+            {
+                this.islog = login;
+            }
+            public int getislogin()
+            {
+                return this.islog;
+            }
+        }
         public Login()
         {
+            connection = new MySqlConnection("Server=localhost;Port=3306;Database=movie;Uid=root;Pwd=0506");
+            connection.Open();
             InitializeComponent();
         }
 
@@ -33,36 +56,38 @@ namespace Movie
         {
             string ID = ID_text.Text;
             string PW = PW_text.Text;
+            islogin login = new islogin();
 
-            MySqlConnection connection = new MySqlConnection("Server=localhost;Port=3306;Database=movie;Uid=root;Pwd=0506");
-            connection.Open();
-            string query1 = "SELECT * FROM movie.userinfo WHERE ID = '" + ID + "')";
+            cmd = new MySqlCommand();
+            if (isCon == 0)
+            {
+                cmd.Connection = connection;
+                isCon = 1;
+            }
+            cmd.CommandText = "SELECT iD,PW,Email FROM movie.userinfo WHERE ID = '" + ID_text.Text + "' AND PW = '" + PW_text.Text + "'";
+            rdr = cmd.ExecuteReader();
+
             try
             {
-                MySqlCommand command = new MySqlCommand(query1,connection);
-                MySqlDataReader rdr = command.ExecuteReader();
-                while (rdr.HasRows)
+                while (rdr.Read())
                 {
-                    rdr.Read();
-                    MessageBox.Show(rdr.GetString(0) + rdr[1].ToString() + rdr[2].ToString());
-                    
-                    /*
-                    if(rdr["PW"].Equals(PW))
+                    if (rdr[0].ToString().Equals(ID) && rdr[1].ToString().Equals(PW) && login.getislogin() == 0)
                     {
                         MessageBox.Show("로그인 성공!");
+                        islogin1 = 1;
+                        this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("ID혹은 PW를 확인하세요.");
+                        MessageBox.Show("ID 혹은 PW를 확인하세요.");
                     }
-                    */
-
                 }
-
+                Form1 main = new Form1(islogin1, ID);
+                
             }
-            catch (Exception)
+            catch (Exception )
             {
-
+                MessageBox.Show("에러");
             }
         }
     }
