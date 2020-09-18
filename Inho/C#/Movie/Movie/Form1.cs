@@ -68,13 +68,64 @@ namespace Movie
 
         }
 
-
         private void button14_Click(object sender, EventArgs e)
         {
             MessageBox.Show(islogin1.ToString());
             Initialization();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void pictureBox_click(object sender, EventArgs e)
+        {
+            PictureBox t = sender as PictureBox;
+            string s = t.Name;
+            switch(s)
+            {
+                case "tenet":
+                    MessageBox.Show("테넷");
+                    break;
+                case "endgame":
+                    MessageBox.Show("엔드게임");
+                    break;
+                case "extraction":
+                    MessageBox.Show("익스트랙션");
+                    break;
+                case "darkknight":
+                    MessageBox.Show("다크나이트:라이즈");
+                    break;
+                case "knivesout":
+                    MessageBox.Show("나이브스아웃");
+                    break;
+                case "search":
+                    MessageBox.Show("서치");
+                    break;
+                case "goksung":
+                    MessageBox.Show("곡성");
+                    break;
+                case "savaha":
+                    MessageBox.Show("사바하");
+                    break;
+                case "titanic":
+                    MessageBox.Show("타이타닉");
+                    break;
+                case "loveactually":
+                    MessageBox.Show("러브액츄얼리");
+                    break;
+                case "extremejob":
+                    MessageBox.Show("극한직업");
+                    break;
+                case "threeidiot":
+                    MessageBox.Show("세 얼간이");
+                    break;
+
+            }
+
+            Ticket ticket = new Ticket();
+            ticket.Show();
+        }
     }
 }

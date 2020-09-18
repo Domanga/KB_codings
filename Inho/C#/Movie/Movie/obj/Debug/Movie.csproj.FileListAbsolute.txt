@@ -94,3 +94,4 @@ C:\Users\KB\Documents\Git\KB_codings\Inho\C#\Movie\Movie\bin\Debug\System.Buffer
 C:\Users\KB\Documents\Git\KB_codings\Inho\C#\Movie\Movie\bin\Debug\System.Memory.xml
 C:\Users\KB\Documents\Git\KB_codings\Inho\C#\Movie\Movie\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\KB\Documents\Git\KB_codings\Inho\C#\Movie\Movie\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\KB\Documents\Git\KB_codings\Inho\C#\Movie\Movie\obj\Debug\Movie.Ticket.resources

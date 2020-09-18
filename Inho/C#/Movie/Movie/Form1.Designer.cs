@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ID_text = new System.Windows.Forms.Label();
             this.out_btn = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -42,10 +43,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.knivesout = new System.Windows.Forms.PictureBox();
+            this.search = new System.Windows.Forms.PictureBox();
+            this.goksung = new System.Windows.Forms.PictureBox();
+            this.savaha = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -55,19 +56,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.logout_btn = new System.Windows.Forms.Button();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.darkknight = new System.Windows.Forms.PictureBox();
             this.button12 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.tenet = new System.Windows.Forms.PictureBox();
+            this.endgame = new System.Windows.Forms.PictureBox();
+            this.extraction = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -76,49 +74,39 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.threeidiot = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.ID_text = new System.Windows.Forms.Label();
+            this.titanic = new System.Windows.Forms.PictureBox();
+            this.loveactually = new System.Windows.Forms.PictureBox();
+            this.extremejob = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.knivesout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goksung)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.savaha)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.darkknight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endgame)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.extraction)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threeidiot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.titanic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loveactually)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.extremejob)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -136,6 +124,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(79, 628);
             this.panel1.TabIndex = 1;
+            // 
+            // ID_text
+            // 
+            this.ID_text.AutoSize = true;
+            this.ID_text.Location = new System.Drawing.Point(8, 67);
+            this.ID_text.Name = "ID_text";
+            this.ID_text.Size = new System.Drawing.Size(58, 21);
+            this.ID_text.TabIndex = 5;
+            this.ID_text.Text = "로그인";
             // 
             // out_btn
             // 
@@ -251,49 +248,53 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(16, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 23);
+            this.label1.Size = new System.Drawing.Size(142, 23);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Thriller / Horor";
+            this.label1.Text = "Thriller / Horror";
             // 
-            // pictureBox2
+            // knivesout
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(45, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
+            this.knivesout.Image = ((System.Drawing.Image)(resources.GetObject("knivesout.Image")));
+            this.knivesout.Location = new System.Drawing.Point(45, 58);
+            this.knivesout.Name = "knivesout";
+            this.knivesout.Size = new System.Drawing.Size(143, 207);
+            this.knivesout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.knivesout.TabIndex = 19;
+            this.knivesout.TabStop = false;
+            this.knivesout.Click += new System.EventHandler(this.pictureBox_click);
             // 
-            // pictureBox3
+            // search
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(222, 58);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 19;
-            this.pictureBox3.TabStop = false;
+            this.search.Image = ((System.Drawing.Image)(resources.GetObject("search.Image")));
+            this.search.Location = new System.Drawing.Point(222, 58);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(143, 207);
+            this.search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.search.TabIndex = 19;
+            this.search.TabStop = false;
+            this.search.Click += new System.EventHandler(this.pictureBox_click);
             // 
-            // pictureBox4
+            // goksung
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(402, 58);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 19;
-            this.pictureBox4.TabStop = false;
+            this.goksung.Image = ((System.Drawing.Image)(resources.GetObject("goksung.Image")));
+            this.goksung.Location = new System.Drawing.Point(402, 58);
+            this.goksung.Name = "goksung";
+            this.goksung.Size = new System.Drawing.Size(143, 207);
+            this.goksung.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.goksung.TabIndex = 19;
+            this.goksung.TabStop = false;
+            this.goksung.Click += new System.EventHandler(this.pictureBox_click);
             // 
-            // pictureBox5
+            // savaha
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(581, 58);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 19;
-            this.pictureBox5.TabStop = false;
+            this.savaha.Image = ((System.Drawing.Image)(resources.GetObject("savaha.Image")));
+            this.savaha.Location = new System.Drawing.Point(581, 58);
+            this.savaha.Name = "savaha";
+            this.savaha.Size = new System.Drawing.Size(143, 207);
+            this.savaha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.savaha.TabIndex = 19;
+            this.savaha.TabStop = false;
+            this.savaha.Click += new System.EventHandler(this.pictureBox_click);
             // 
             // button2
             // 
@@ -335,13 +336,13 @@
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.pictureBox16);
+            this.panel5.Controls.Add(this.darkknight);
             this.panel5.Controls.Add(this.button12);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.button13);
-            this.panel5.Controls.Add(this.pictureBox17);
-            this.panel5.Controls.Add(this.pictureBox18);
-            this.panel5.Controls.Add(this.pictureBox19);
+            this.panel5.Controls.Add(this.tenet);
+            this.panel5.Controls.Add(this.endgame);
+            this.panel5.Controls.Add(this.extraction);
             this.panel5.Location = new System.Drawing.Point(3, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(775, 300);
@@ -389,24 +390,13 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.pictureBox13);
             this.panel6.Controls.Add(this.button10);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.logout_btn);
-            this.panel6.Controls.Add(this.pictureBox14);
-            this.panel6.Controls.Add(this.pictureBox15);
             this.panel6.Location = new System.Drawing.Point(8, -298);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(775, 300);
             this.panel6.TabIndex = 23;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Location = new System.Drawing.Point(581, 58);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox13.TabIndex = 19;
-            this.pictureBox13.TabStop = false;
             // 
             // button10
             // 
@@ -441,31 +431,16 @@
             this.logout_btn.TabIndex = 20;
             this.logout_btn.UseVisualStyleBackColor = true;
             // 
-            // pictureBox14
+            // darkknight
             // 
-            this.pictureBox14.Location = new System.Drawing.Point(45, 58);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox14.TabIndex = 19;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Location = new System.Drawing.Point(222, 58);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox15.TabIndex = 19;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(581, 58);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 19;
-            this.pictureBox16.TabStop = false;
+            this.darkknight.Image = ((System.Drawing.Image)(resources.GetObject("darkknight.Image")));
+            this.darkknight.Location = new System.Drawing.Point(581, 58);
+            this.darkknight.Name = "darkknight";
+            this.darkknight.Size = new System.Drawing.Size(143, 207);
+            this.darkknight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.darkknight.TabIndex = 19;
+            this.darkknight.TabStop = false;
+            this.darkknight.Click += new System.EventHandler(this.pictureBox_click);
             // 
             // button12
             // 
@@ -500,50 +475,53 @@
             this.button13.TabIndex = 20;
             this.button13.UseVisualStyleBackColor = true;
             // 
-            // pictureBox17
+            // tenet
             // 
-            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(45, 58);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 19;
-            this.pictureBox17.TabStop = false;
+            this.tenet.Image = ((System.Drawing.Image)(resources.GetObject("tenet.Image")));
+            this.tenet.Location = new System.Drawing.Point(45, 58);
+            this.tenet.Name = "tenet";
+            this.tenet.Size = new System.Drawing.Size(143, 207);
+            this.tenet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.tenet.TabIndex = 19;
+            this.tenet.TabStop = false;
+            this.tenet.Click += new System.EventHandler(this.pictureBox_click);
             // 
-            // pictureBox18
+            // endgame
             // 
-            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(222, 58);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 19;
-            this.pictureBox18.TabStop = false;
+            this.endgame.Image = ((System.Drawing.Image)(resources.GetObject("endgame.Image")));
+            this.endgame.Location = new System.Drawing.Point(222, 58);
+            this.endgame.Name = "endgame";
+            this.endgame.Size = new System.Drawing.Size(143, 207);
+            this.endgame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.endgame.TabIndex = 19;
+            this.endgame.TabStop = false;
+            this.endgame.Click += new System.EventHandler(this.pictureBox_click);
             // 
-            // pictureBox19
+            // extraction
             // 
-            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(402, 58);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox19.TabIndex = 19;
-            this.pictureBox19.TabStop = false;
+            this.extraction.Image = ((System.Drawing.Image)(resources.GetObject("extraction.Image")));
+            this.extraction.Location = new System.Drawing.Point(402, 58);
+            this.extraction.Name = "extraction";
+            this.extraction.Size = new System.Drawing.Size(143, 207);
+            this.extraction.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.extraction.TabIndex = 19;
+            this.extraction.TabStop = false;
+            this.extraction.Click += new System.EventHandler(this.pictureBox_click);
             // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.savaha);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.knivesout);
+            this.panel2.Controls.Add(this.search);
+            this.panel2.Controls.Add(this.goksung);
             this.panel2.Location = new System.Drawing.Point(3, 309);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(775, 300);
@@ -594,15 +572,15 @@
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.pictureBox6);
+            this.panel3.Controls.Add(this.threeidiot);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.pictureBox7);
-            this.panel3.Controls.Add(this.pictureBox8);
-            this.panel3.Controls.Add(this.pictureBox9);
+            this.panel3.Controls.Add(this.titanic);
+            this.panel3.Controls.Add(this.loveactually);
+            this.panel3.Controls.Add(this.extremejob);
             this.panel3.Location = new System.Drawing.Point(3, 615);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(775, 300);
@@ -620,24 +598,13 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Controls.Add(this.button8);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.button9);
-            this.panel4.Controls.Add(this.pictureBox11);
-            this.panel4.Controls.Add(this.pictureBox12);
             this.panel4.Location = new System.Drawing.Point(8, -298);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(775, 300);
             this.panel4.TabIndex = 23;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Location = new System.Drawing.Point(581, 58);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox10.TabIndex = 19;
-            this.pictureBox10.TabStop = false;
             // 
             // button8
             // 
@@ -671,22 +638,7 @@
             this.button9.Size = new System.Drawing.Size(43, 40);
             this.button9.TabIndex = 20;
             this.button9.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Location = new System.Drawing.Point(45, 58);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox11.TabIndex = 19;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Location = new System.Drawing.Point(222, 58);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox12.TabIndex = 19;
-            this.pictureBox12.TabStop = false;
+
             // 
             // label15
             // 
@@ -698,15 +650,16 @@
             this.label15.TabIndex = 30;
             this.label15.Text = "극한직업";
             // 
-            // pictureBox6
+            // threeidiot
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(581, 58);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 19;
-            this.pictureBox6.TabStop = false;
+            this.threeidiot.Image = ((System.Drawing.Image)(resources.GetObject("threeidiot.Image")));
+            this.threeidiot.Location = new System.Drawing.Point(581, 58);
+            this.threeidiot.Name = "threeidiot";
+            this.threeidiot.Size = new System.Drawing.Size(143, 207);
+            this.threeidiot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.threeidiot.TabIndex = 19;
+            this.threeidiot.TabStop = false;
+            this.threeidiot.Click += new System.EventHandler(this.pictureBox_click);
             // 
             // label16
             // 
@@ -761,44 +714,38 @@
             this.button7.TabIndex = 20;
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // pictureBox7
+            // titanic
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(45, 58);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 19;
-            this.pictureBox7.TabStop = false;
+            this.titanic.Image = ((System.Drawing.Image)(resources.GetObject("titanic.Image")));
+            this.titanic.Location = new System.Drawing.Point(45, 58);
+            this.titanic.Name = "titanic";
+            this.titanic.Size = new System.Drawing.Size(143, 207);
+            this.titanic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.titanic.TabIndex = 19;
+            this.titanic.TabStop = false;
+            this.titanic.Click += new System.EventHandler(this.pictureBox_click);
             // 
-            // pictureBox8
+            // loveactually
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(222, 58);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 19;
-            this.pictureBox8.TabStop = false;
+            this.loveactually.Image = ((System.Drawing.Image)(resources.GetObject("loveactually.Image")));
+            this.loveactually.Location = new System.Drawing.Point(222, 58);
+            this.loveactually.Name = "loveactually";
+            this.loveactually.Size = new System.Drawing.Size(143, 207);
+            this.loveactually.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.loveactually.TabIndex = 19;
+            this.loveactually.TabStop = false;
+            this.loveactually.Click += new System.EventHandler(this.pictureBox_click);
             // 
-            // pictureBox9
+            // extremejob
             // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(402, 58);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(143, 207);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 19;
-            this.pictureBox9.TabStop = false;
-            // 
-            // ID_text
-            // 
-            this.ID_text.AutoSize = true;
-            this.ID_text.Location = new System.Drawing.Point(8, 67);
-            this.ID_text.Name = "ID_text";
-            this.ID_text.Size = new System.Drawing.Size(58, 21);
-            this.ID_text.TabIndex = 5;
-            this.ID_text.Text = "로그인";
+            this.extremejob.Image = ((System.Drawing.Image)(resources.GetObject("extremejob.Image")));
+            this.extremejob.Location = new System.Drawing.Point(402, 58);
+            this.extremejob.Name = "extremejob";
+            this.extremejob.Size = new System.Drawing.Size(143, 207);
+            this.extremejob.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.extremejob.TabIndex = 19;
+            this.extremejob.TabStop = false;
+            this.extremejob.Click += new System.EventHandler(this.pictureBox_click);
             // 
             // Form1
             // 
@@ -816,38 +763,33 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.knivesout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goksung)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.savaha)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.darkknight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tenet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.endgame)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.extraction)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threeidiot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.titanic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loveactually)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.extremejob)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -861,10 +803,10 @@
         private System.Windows.Forms.Button login_btn;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Button exit_btn;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox savaha;
+        private System.Windows.Forms.PictureBox goksung;
+        private System.Windows.Forms.PictureBox search;
+        private System.Windows.Forms.PictureBox knivesout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
@@ -873,35 +815,29 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox threeidiot;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox titanic;
+        private System.Windows.Forms.PictureBox loveactually;
+        private System.Windows.Forms.PictureBox extremejob;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button logout_btn;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox darkknight;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.PictureBox tenet;
+        private System.Windows.Forms.PictureBox endgame;
+        private System.Windows.Forms.PictureBox extraction;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;

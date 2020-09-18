@@ -184,6 +184,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket.Designer.cs">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket.resx">
+      <DependentUpon>Ticket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -229,6 +238,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources\darknightRise.jpg" />
+    <EmbeddedResource Include="Properties\Resources\endGame.jpg" />
+    <EmbeddedResource Include="Properties\Resources\Extraction.jpg" />
+    <EmbeddedResource Include="Properties\Resources\extremeJob.jpg" />
+    <EmbeddedResource Include="Properties\Resources\goksung.jpg" />
+    <EmbeddedResource Include="Properties\Resources\kinvesOut.jpg" />
+    <EmbeddedResource Include="Properties\Resources\loveActually.jpg" />
+    <EmbeddedResource Include="Properties\Resources\savaha.jpg" />
+    <EmbeddedResource Include="Properties\Resources\Search.jpg" />
+    <EmbeddedResource Include="Properties\Resources\tenet.jpg" />
+    <EmbeddedResource Include="Properties\Resources\threeIdiot.jpg" />
+    <EmbeddedResource Include="Properties\titanic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources\titanic.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
