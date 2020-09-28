@@ -2,12 +2,31 @@ package com.kb.www.vo;
 
 public class ArticleVo {
     private int articleNumber;
+    private int mb_sq;
     private String articleTitle;
     private String articleContents;
     private String hit;
     private String writeDatetime;
     private String modifyDatetime;
     private String deleteDatetime;
+
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getMb_sq() {
+        return mb_sq;
+    }
+
+    public void setMb_sq(int mb_sq) {
+        this.mb_sq = mb_sq;
+    }
 
     public int getArticleNumber() {
         return articleNumber;

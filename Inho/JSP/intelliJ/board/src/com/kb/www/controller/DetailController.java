@@ -8,17 +8,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import com.kb.www.action.DetailAction;
+import com.kb.www.action.ArticleDetailAction;
 import com.kb.www.common.Action;
 import com.kb.www.common.ActionForward;
 
-@WebServlet("/detail")
+@WebServlet("/details")
 public class DetailController extends HttpServlet {
     protected void doProcess (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
 
         ActionForward forward = null;
-        Action action = new DetailAction();
+        Action action = new ArticleDetailAction();
 
         try {
             forward = action.execute(request, response);

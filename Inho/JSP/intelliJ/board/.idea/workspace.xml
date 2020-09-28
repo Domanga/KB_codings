@@ -5,6 +5,10 @@
       <artifact name="board:war exploded" />
     </artifacts-to-build>
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/web/views/detail.jsp" line="67" />
+    <bookmark url="file://$PROJECT_DIR$/web/views/detail.jsp" line="66" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a3b30b99-b8e3-48aa-863d-51f77f976abf" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -48,6 +52,13 @@
         <item name="kb: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="board: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="kb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="kb: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="member: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -57,13 +68,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kb/www/controller/InsertController.java">
+        <entry file="file://$PROJECT_DIR$/web/views/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="440">
+              <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -71,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleAddAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            <state relative-caret-position="76">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,10 +89,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kb/www/controller/DetailController.java">
+        <entry file="file://$PROJECT_DIR$/src/com/kb/www/service/BoardService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="686">
-              <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+            <state relative-caret-position="412">
+              <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,10 +101,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/DetailAction.java">
+        <entry file="file://$PROJECT_DIR$/src/com/kb/www/vo/ArticleVo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+            <state relative-caret-position="44">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleDetailAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/views/detail.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/kb/www/controller/BoardController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="708">
+              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,22 +143,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/kb/www/service/BoardService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/kb/www/dao/BoardDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="720">
+              <caret line="61" column="29" lean-forward="true" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,37 +155,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/views/list.jsp">
+        <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleAddFormAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1166">
-              <caret line="53" column="8" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+            <state relative-caret-position="440">
+              <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="33" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://5cd7f2d0-c482-44e7-8627-19a98d88a96f/schema/kb/table/board">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5cd7f2d0-c482-44e7-8627-19a98d88a96f/console.sql">
+        <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleListAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="37" selection-start-column="36" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kb/www/common/JdbcUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="61" column="29" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="29" />
+            <state relative-caret-position="352">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -169,6 +180,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -176,19 +188,42 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/kb/www/vo/ArticleVo.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/com/kb/www/action/ArticleListAction.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/com/kb/www/action/DetailAction.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/5cd7f2d0-c482-44e7-8627-19a98d88a96f/console.sql" />
         <option value="$PROJECT_DIR$/src/com/kb/www/controller/InsertController.java" />
-        <option value="$PROJECT_DIR$/src/com/kb/www/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/com/kb/www/controller/Detail.java" />
-        <option value="$PROJECT_DIR$/web/views/list.jsp" />
-        <option value="$PROJECT_DIR$/src/com/kb/www/action/ArticleAddAction.java" />
-        <option value="$PROJECT_DIR$/src/com/kb/www/dao/BoardDao.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/controller/DetailController.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/DetailAction.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/ArticleDetailAction.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/ArticleDeleteAction.java" />
+        <option value="$PROJECT_DIR$/web/views/updateForm.jsp" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/ArticleUpdateProcAction.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/ArticleUpdateAction.java" />
+        <option value="$PROJECT_DIR$/web/views/joinform.jsp" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/common/RegExp.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/vo/MemberHistoryVo.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/vo/MemberVo.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/contants/Constants.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/MemberJoinProcAction.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/MemberJoinFormAction.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/MemberLoginFormAction.java" />
+        <option value="$PROJECT_DIR$/web/views/loginForm.jsp" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/MemberLoginProcAction.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/MemberLogoutProcAction.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/MemberLogoutAction.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/common/LoginManager.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/controller/BoardController.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/ArticleAddFormAction.java" />
         <option value="$PROJECT_DIR$/src/com/kb/www/service/BoardService.java" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/action/ArticleAddAction.java" />
+        <option value="$PROJECT_DIR$/web/views/writeForm.jsp" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/5cd7f2d0-c482-44e7-8627-19a98d88a96f/console.sql" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/vo/ArticleVo.java" />
+        <option value="$PROJECT_DIR$/web/views/list.jsp" />
+        <option value="$PROJECT_DIR$/web/views/detail.jsp" />
+        <option value="$PROJECT_DIR$/src/com/kb/www/dao/BoardDao.java" />
       </list>
     </option>
   </component>
@@ -285,7 +320,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="kb" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="contants" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="board" type="b2602c69:ProjectViewProjectNode" />
@@ -323,6 +358,12 @@
               <item name="board" type="b2602c69:ProjectViewProjectNode" />
               <item name="board" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="board" type="b2602c69:ProjectViewProjectNode" />
+              <item name="board" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -352,7 +393,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600932059752" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1601279400834" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="D:/apache-tomcat-8.5.57/apache-tomcat-8.5.57/lib/servlet-api.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -361,12 +402,16 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kb.www.action" />
+      <recent name="com.kb.www.controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\0_study\intelliJ\board\src\com\kb\www\common" />
+      <recent name="D:\0_study\intelliJ\board\web\views" />
       <recent name="D:\0_study\intelliJ\board\web" />
       <recent name="D:\0_study\intelliJ\board\src\com\kb\www\vo" />
       <recent name="D:\0_study\intelliJ\board\src\com\kb\www\service" />
-      <recent name="D:\0_study\intelliJ\board\src\com\kb\www\dao" />
-      <recent name="D:\0_study\intelliJ\board\src\com\kb\www\controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -543,18 +588,32 @@
       <workItem from="1600916146526" duration="488000" />
       <workItem from="1600916639869" duration="1629000" />
       <workItem from="1600918285978" duration="5445000" />
-      <workItem from="1600925280354" duration="6716000" />
+      <workItem from="1600925280354" duration="6886000" />
+      <workItem from="1600932611940" duration="1351000" />
+      <workItem from="1600993637441" duration="5187000" />
+      <workItem from="1600998844421" duration="19364000" />
+      <workItem from="1601251993383" duration="9600000" />
+      <workItem from="1601262275120" duration="14997000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22446000" />
+    <option name="totallyTimeSpent" value="73115000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7913907" visible="true" weight="0.13578275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7913907" visible="true" weight="0.17412141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -562,19 +621,19 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.20578778" side_tool="true" weight="0.18796591" />
       <window_info id="Web" order="7" sideWeight="0.20860927" side_tool="true" weight="0.13578275" />
-      <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.49733758" weight="0.3288889" />
-      <window_info anchor="bottom" id="Messages" order="1" sideWeight="0.49201277" weight="0.24" />
+      <window_info anchor="bottom" id="Database Console" order="0" sideWeight="0.49574015" weight="0.26666668" />
+      <window_info anchor="bottom" id="Messages" order="1" sideWeight="0.48935038" weight="0.24" />
       <window_info anchor="bottom" id="Application Servers" order="2" sideWeight="0.4978701" weight="0.3288889" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" auto_hide="true" id="Run" order="5" type="SLIDING" weight="0.30888888" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
+      <window_info anchor="bottom" auto_hide="true" id="Run" order="5" sideWeight="0.49201277" weight="0.5466667" />
+      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.49946752" weight="0.40888888" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5026624" side_tool="true" weight="0.3288889" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5106496" side_tool="true" weight="0.24" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
@@ -596,106 +655,30 @@
     <entry file="file://$PROJECT_DIR$/src/com/kb/www/controller/controller.java" />
     <entry file="file://$PROJECT_DIR$/web/views/sample.jsp" />
     <entry file="file://$PROJECT_DIR$/src/com/kb/www/controller/Servlet333.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/kb/www/vo/ArticleVo.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="e#312#313#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1085#1086#0" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1213#1214#0" expanded="true" />
-            <element signature="e#1273#1274#0" expanded="true" />
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1366#1367#0" expanded="true" />
-            <element signature="e#1403#1404#0" expanded="true" />
-            <element signature="e#1463#1464#0" expanded="true" />
-            <element signature="e#1515#1516#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        <state relative-caret-position="154">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kb/www/common/ActionForward.java">
+    <entry file="jar://D:/apache-tomcat-8.5.57/apache-tomcat-8.5.57/lib/servlet-api.jar!/javax/servlet/http/HttpServlet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kb/www/common/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kb/www/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleListAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="42" column="175" selection-start-line="42" selection-start-column="175" selection-end-line="42" selection-end-column="175" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kb/www/controller/InsertController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="176">
           <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -703,17 +686,301 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kb/www/common/JdbcUtil.java">
+    <entry file="jar://C:/Program Files/Java/jdk-14.0.1/lib/src.zip!/java.base/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="61" column="29" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="29" />
+        <state relative-caret-position="167">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5cd7f2d0-c482-44e7-8627-19a98d88a96f/console.sql">
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/common/JdbcUtil.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/common/ActionForward.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleUpdateAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
-          <caret column="37" selection-start-column="36" selection-end-column="37" />
+          <ID>DATABASE</ID>
+          <OriginalElement>5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-305.0" y="12.0" />
+          <SelectedNodes>
+            <node>5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member_history">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member_history</OriginalElement>
+          <nodes>
+            <node x="9.0" y="190.0">5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member_history</node>
+            <node x="0.0" y="0.0">5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member_history" target="5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member">
+              <point x="0.0" y="-59.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-305.0" y="96.0" />
+          <SelectedNodes>
+            <node>5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member_history</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.board">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.board</OriginalElement>
+          <nodes>
+            <node x="3.0" y="0.0">5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member</node>
+            <node x="0.0" y="190.0">5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.board</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.board" target="5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member">
+              <point x="0.0" y="-103.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-302.0" y="140.0" />
+          <SelectedNodes>
+            <node>5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.board</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5cd7f2d0-c482-44e7-8627-19a98d88a96f.SCHEMA:kb">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>5cd7f2d0-c482-44e7-8627-19a98d88a96f.SCHEMA:kb</OriginalElement>
+          <nodes>
+            <node x="190.0" y="234.0">5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member_history</node>
+            <node x="92.0" y="0.0">5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member</node>
+            <node x="0.0" y="190.0">5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.board</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.board" target="5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member">
+              <point x="0.0" y="-103.0" />
+              <point x="85.0" y="165.0" />
+              <point x="133.0" y="165.0" />
+              <point x="-41.0" y="70.0" />
+            </edge>
+            <edge source="5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member_history" target="5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.member">
+              <point x="0.0" y="-59.0" />
+              <point x="263.0" y="165.0" />
+              <point x="215.0" y="165.0" />
+              <point x="41.0" y="70.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-219.0" y="140.0" />
+          <SelectedNodes>
+            <node>5cd7f2d0-c482-44e7-8627-19a98d88a96f.TABLE:kb.board</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/controller/DetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/updateForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleUpdateProcAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="17" column="109" selection-start-line="15" selection-start-column="37" selection-end-line="17" selection-end-column="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/MemberJoinFormAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/common/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/common/BCrypt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="727" selection-start-line="727" selection-end-line="727" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#26581#26582#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/MemberJoinProcAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="20" column="83" selection-start-line="20" selection-start-column="83" selection-end-line="20" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/common/RegExp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/contants/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="53" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/vo/MemberVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/vo/MemberHistoryVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/loginForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/MemberLoginProcAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/MemberLoginFormAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/joinform.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="862">
+          <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -724,20 +991,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/DetailAction.java">
+    <entry file="das://5cd7f2d0-c482-44e7-8627-19a98d88a96f/schema/kb/table/member">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://5cd7f2d0-c482-44e7-8627-19a98d88a96f/schema/kb/table/member_history">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/MemberLogoutAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        <state relative-caret-position="176">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="23" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/common/LoginManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2039#2040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/writeForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleDeleteAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5cd7f2d0-c482-44e7-8627-19a98d88a96f/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-14.0.1/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="1019" column="19" selection-start-line="1019" selection-start-column="19" selection-end-line="1019" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleAddAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kb/www/dao/BoardDao.java">
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleAddFormAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="440">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="33" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/controller/BoardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleListAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -746,35 +1097,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="53" column="8" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+        <state relative-caret-position="440">
+          <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleAddAction.java">
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/vo/ArticleVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kb/www/controller/DetailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
-          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kb/www/service/BoardService.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/action/ArticleDetailAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kb/www/dao/BoardDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="61" column="29" lean-forward="true" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
