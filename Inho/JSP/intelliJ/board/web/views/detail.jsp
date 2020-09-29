@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-<%@page import="com.kb.www.vo.ArticleVo" %>
+<%@page import="com.kb.www.common.LoginManager" %>
+<%@ page import="com.kb.www.vo.ArticleVo" %>
 
-<%ArticleVo bo = (ArticleVo) request.getAttribute("article"); %>
+<%ArticleVo bo = (ArticleVo) request.getAttribute("article");
+    LoginManager lm = LoginManager.getInstance();
+    String id = lm.getMemberId(session);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,8 +66,10 @@
         <td><%=bo.getModifyDatetime() %></td>
     </tr>
 </table>
+<button onclick="location.href='/list.do'">뒤로가기</button>
+<%if (id !=null && id.equals(bo.getId())) {%>
 <button onclick="location.href='/update.do?number=<%=bo.getArticleNumber()%>'">수정하기</button>
 <button onclick="location.href='/delete.do?number=<%=bo.getArticleNumber()%>'">삭제하기</button>
-<button onclick="location.href='/list.do'">뒤로가기</button>
+<% } %>
 </body>
 </html>

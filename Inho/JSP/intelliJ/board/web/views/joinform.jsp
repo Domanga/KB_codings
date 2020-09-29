@@ -62,7 +62,7 @@
     비밀번호 : <input type="password" name="pw" minlength="4" maxlength="30"> <br/>
     비밀번호확인 : <input type="password" name="pw_confirm" minlength="4" maxlength="30"> <br/>
     <input type="submit" value="가입">
-    <button onclick="location.href=/list.do">취소</button>
+    <button type="button" onclick="location.href='/'">취소</button>
 </form>
 </body>
 </html>

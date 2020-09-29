@@ -1188,6 +1188,7 @@
       <Position>4</Position>
       <DataType>tinyint|0s</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="294" parent="277" name="leave_fl">

@@ -35,7 +35,7 @@ public class ArticleDetailAction implements Action {
         }
 
         BoardService svc = new BoardService();
-        ArticleVo article = svc.getArticle(number);
+        ArticleVo article = svc.getArticle(buff);
 
         if( article == null ) {
             response.setContentType("text/html;charset=UTF-8");

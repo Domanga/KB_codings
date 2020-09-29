@@ -19,17 +19,20 @@ import static com.kb.www.common.RegExp.ARTICLE_SUBJECT;
 public class ArticleAddAction implements Action {
     @Override
     public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        ArticleVo insert = new ArticleVo();
+
+        LoginManager lm = LoginManager.getInstance();
+        String id = lm.getMemberId(request.getSession());
+
+        if(id == null) {
+            response.setContentType("text/html;charset=UTF-8");
+            PrintWriter out = response.getWriter();
+            out.println("<script>alert('로그인이 필요한 서비스 입니다.'); location.href='/login.do'; </script>");
+            out.close();
+            return null;
+        }
 
         String title = request.getParameter("subject");
         String content = request.getParameter("content");
-
-        HttpSession session = request.getSession();
-        LoginManager lm = LoginManager.getInstance();
-
-        String id = lm.getMemberId(session);
-        MemberVo memberVo = new MemberVo();
-        memberVo.setId(lm.getMemberId(session));
 
         if ((title == null || title.equals("") || !RegExp.checkString(ARTICLE_SUBJECT, title))
                 && (content == null || content.equals("") || !RegExp.checkString(ARTICLE_CONTENT, content))) {
@@ -41,6 +44,7 @@ public class ArticleAddAction implements Action {
         }
 
         BoardService bsv = new BoardService();
+        ArticleVo insert = new ArticleVo();
 
         insert.setArticleTitle(title);
         insert.setArticleContents(content);

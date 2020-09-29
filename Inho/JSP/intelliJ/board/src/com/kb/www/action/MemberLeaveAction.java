@@ -6,16 +6,18 @@ import com.kb.www.common.LoginManager;
 import com.kb.www.common.RegExp;
 import com.kb.www.service.BoardService;
 import com.kb.www.vo.ArticleVo;
+import com.kb.www.vo.MemberHistoryVo;
+import com.kb.www.vo.MemberVo;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 
-import static com.kb.www.common.RegExp.ARTICLE_CONTENT;
-import static com.kb.www.common.RegExp.ARTICLE_SUBJECT;
+import static com.kb.www.common.RegExp.PAGE_NUM;
+import static com.kb.www.contants.Constants.MEMBER_HISTORY_EVENT_LEAVE;
 
-public class ArticleAddFormAction implements Action {
+public class MemberLeaveAction implements Action {
     @Override
     public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
@@ -30,10 +32,20 @@ public class ArticleAddFormAction implements Action {
             return null;
         }
 
+        BoardService bsv = new BoardService();
+        MemberVo memberVo = bsv.getMember(id);
+        memberVo.setLgn_fl(false);
+        memberVo.setLeave_fl(true);
+
+        MemberHistoryVo memberHistoryVo = new MemberHistoryVo();
+        memberHistoryVo.setMb_sq(memberVo.getSq());
+        memberHistoryVo.setExt_type(MEMBER_HISTORY_EVENT_LEAVE);
+
+        bsv.leaveMember(memberVo, memberHistoryVo);
+
         ActionForward forward = new ActionForward();
 
-        forward.setPath("/views/writeForm.jsp");
-        forward.setRedirect(true);
+        forward.setPath("/logout.do");
         return forward;
     }
 }

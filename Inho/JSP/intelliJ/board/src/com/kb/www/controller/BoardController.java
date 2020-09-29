@@ -110,6 +110,20 @@ public class BoardController extends HttpServlet {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        } else if (command.equals("/history.do")) {
+            action = new MemberHistoryAction();
+            try {
+                forward = action.execute(request, response);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else if (command.equals("/leave.do")) {
+            action = new MemberLeaveAction();
+            try {
+                forward = action.execute(request, response);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
         if (forward != null) {

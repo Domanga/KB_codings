@@ -42,6 +42,14 @@ public class MemberLoginProcAction implements Action {
             return null;
         }
 
+        if(memberVo.isLeave_fl()) {
+            response.setContentType("text/html;charset=UTF-8");
+            PrintWriter out = response.getWriter();
+            out.println("<script>alert('회원정보가 삭제되어 로그인할 수 없습니다.'); location.href='/'; </script>");
+            out.close();
+            return null;
+        }
+
         memberVo.setLgn_fl(true);
         MemberHistoryVo memberHistoryVo = new MemberHistoryVo();
         memberHistoryVo.setMb_sq(memberVo.getSq());

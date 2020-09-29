@@ -19,7 +19,9 @@
 <a href="/join.do">회원가입</a>
 <a href="/login.do">로그인</a>
 <% } else { %>
+<a href="/history.do">히스토리</a>
 <a href="/logout.do">로그아웃</a>
+<a href="/leave.do">회원탈퇴</a>
 <% } %>
 </body>
 </html>

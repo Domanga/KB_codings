@@ -28,7 +28,7 @@
 </head>
 <script type="text/javascript">
     function showDetail(articleNum) {
-        location.href = "detail.do?num=" + articleNum;
+        location.href = "/detail.do?num=" + articleNum;
     }
 
     function insertInfo() {
@@ -73,6 +73,7 @@
 </table>
 <% } %>
 <br/>
-<button style="margin: auto" onclick="insertInfo()">새로작성하기</button>
+<button style="margin: auto" onclick="insertInfo()">새로작성하기</button> <br/>
+<button onclick="location.href='/index.jsp'">뒤로가기</button>
 </body>
 </html>

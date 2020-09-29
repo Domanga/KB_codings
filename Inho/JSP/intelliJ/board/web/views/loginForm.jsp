@@ -31,7 +31,7 @@
     아이디 : <input type="text" name="id"> <br/>
     비밀번호 : <input type="password" name="pw" > <br/>
     <input type="submit" value="로그인">
-    <button onclick="location.href=/list.do">취소</button>
+    <button type="button" onclick="location.href='/'">취소</button>
 </form>
 </body>
 </html>

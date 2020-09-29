@@ -36,7 +36,7 @@
     내용 : <textarea name="content" id="content" cols="30" rows="10"><%=bo.getArticleContents()%></textarea> <br/>
     <input type="submit" value="수정하기">
     <br/>
-    <a href="/list.do">뒤로가기</a>
+    <button onclick="location.href='/list.do'">뒤로가기</button>
 </form>
 </body>
 </html>

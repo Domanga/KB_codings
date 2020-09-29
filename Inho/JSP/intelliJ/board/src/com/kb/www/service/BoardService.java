@@ -28,62 +28,58 @@ public class BoardService {
 
         int count = dao.addArticle(insert);
 
-        if(count > 0) {
+        if (count > 0) {
             commit(con);
             isSuccess = true;
-        }
-        else {
+        } else {
             rollback(con);
         }
         close(con);
         return isSuccess;
     }
 
-    public ArticleVo getArticle(String num) {
-        String number = num;
+    public ArticleVo getArticle(int num) {
         BoardDao dao = BoardDao.getInstance();
         Connection con = getConnection();
         dao.setConnection(con);
+        ArticleVo bo = null;
         int count = dao.updateHitCount(num);
-        ArticleVo bo = dao.getArticle(number);
-        if(count > 0) {
+        if (count > 0) {
             commit(con);
-        }
-        else {
+            bo = dao.getArticle(num);
+        } else {
             rollback(con);
         }
         close(con);
         return bo;
     }
 
-    public boolean updateArticle (ArticleVo update) {
+    public boolean updateArticle(ArticleVo update) {
         BoardDao dao = BoardDao.getInstance();
         Connection con = getConnection();
         boolean isSuccess = false;
         dao.setConnection(con);
         int count = dao.updateArticle(update);
-        if(count > 0) {
+        if (count > 0) {
             commit(con);
             isSuccess = true;
-        }
-        else {
+        } else {
             rollback(con);
         }
         close(con);
         return isSuccess;
     }
 
-    public boolean deleteArticle (ArticleVo delete) {
+    public boolean deleteArticle(int num) {
         BoardDao dao = BoardDao.getInstance();
         Connection con = getConnection();
         boolean isSuccess = false;
         dao.setConnection(con);
-        int count = dao.deleteArticle(delete);
-        if(count > 0) {
+        int count = dao.deleteArticle(num);
+        if (count > 0) {
             commit(con);
             isSuccess = true;
-        }
-        else {
+        } else {
             rollback(con);
         }
         close(con);
@@ -99,11 +95,10 @@ public class BoardService {
         memberHistoryVo.setMb_sq(dao.getMemberSequence(memberVo.getId()));
         int count_2 = dao.insertMemberHistory(memberHistoryVo);
 
-        if(count_1 > 0 && count_2 > 0) {
+        if (count_1 > 0 && count_2 > 0) {
             commit(con);
             isSuccess = true;
-        }
-        else {
+        } else {
             rollback(con);
         }
         close(con);
@@ -127,11 +122,10 @@ public class BoardService {
         int count_1 = dao.updateLoginState(memberVo);
         int count_2 = dao.insertMemberHistory(memberHistoryVo);
 
-        if(count_1 > 0 && count_2 > 0) {
+        if (count_1 > 0 && count_2 > 0) {
             commit(con);
             isSuccess = true;
-        }
-        else {
+        } else {
             rollback(con);
         }
         close(con);
@@ -143,16 +137,15 @@ public class BoardService {
         Connection con = getConnection();
         dao.setConnection(con);
         boolean isSuccess = false;
-        int count_1 = dao.updateLoginState(memberVo);
         memberVo.setSq(dao.getMemberSequence(memberVo.getId()));
         memberHistoryVo.setMb_sq((memberVo.getSq()));
+        int count_1 = dao.updateLoginState(memberVo);
         int count_2 = dao.insertMemberHistory(memberHistoryVo);
 
-        if(count_1 > 0 && count_2 > 0) {
+        if (count_1 > 0 && count_2 > 0) {
             commit(con);
             isSuccess = true;
-        }
-        else {
+        } else {
             rollback(con);
         }
         close(con);
@@ -167,5 +160,42 @@ public class BoardService {
         int sq = dao.getMemberSequence(id);
         close(con);
         return sq;
+    }
+
+    public String getWriterId(int num) {
+        BoardDao dao = BoardDao.getInstance();
+        Connection con = getConnection();
+        dao.setConnection(con);
+        String id = dao.getWriterId(num);
+        close(con);
+        return id;
+    }
+
+    public ArrayList<MemberHistoryVo> getMemberHistory(String id) {
+        BoardDao dao = BoardDao.getInstance();
+        Connection con = getConnection();
+        dao.setConnection(con);
+        ArrayList<MemberHistoryVo> list = dao.getMemberHistory(id);
+        close(con);
+        return list;
+    }
+
+    public boolean leaveMember(MemberVo memberVo, MemberHistoryVo memberHistoryVo) {
+        BoardDao dao = BoardDao.getInstance();
+        Connection con = getConnection();
+        dao.setConnection(con);
+        boolean isSuccess = false;
+        int count_1 = dao.leaveMember(memberVo);
+        memberHistoryVo.setMb_sq(dao.getMemberSequence(memberVo.getId()));
+        int count_2 = dao.insertMemberHistory(memberHistoryVo);
+
+        if (count_1 > 0 && count_2 > 0) {
+            commit(con);
+            isSuccess = true;
+        } else {
+            rollback(con);
+        }
+        close(con);
+        return isSuccess;
     }
 }

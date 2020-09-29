@@ -3,19 +3,17 @@ package com.kb.www.action;
 import com.kb.www.common.Action;
 import com.kb.www.common.ActionForward;
 import com.kb.www.common.LoginManager;
-import com.kb.www.common.RegExp;
 import com.kb.www.service.BoardService;
 import com.kb.www.vo.ArticleVo;
+import com.kb.www.vo.MemberHistoryVo;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
-import static com.kb.www.common.RegExp.ARTICLE_CONTENT;
-import static com.kb.www.common.RegExp.ARTICLE_SUBJECT;
-
-public class ArticleAddFormAction implements Action {
+public class MemberHistoryAction implements Action {
     @Override
     public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
@@ -30,10 +28,12 @@ public class ArticleAddFormAction implements Action {
             return null;
         }
 
-        ActionForward forward = new ActionForward();
+        BoardService bsv = new BoardService();
+        ArrayList<MemberHistoryVo> list = bsv.getMemberHistory(id);
 
-        forward.setPath("/views/writeForm.jsp");
-        forward.setRedirect(true);
+        ActionForward forward = new ActionForward();
+        request.setAttribute("list", list);
+        forward.setPath("/views/memberHistory.jsp");
         return forward;
     }
 }
