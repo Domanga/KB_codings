@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.movie_image = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.movie_date = new System.Windows.Forms.DateTimePicker();
             this.movie_title = new System.Windows.Forms.Label();
             this.signExit_btn = new System.Windows.Forms.Button();
             this.AM_time = new System.Windows.Forms.CheckBox();
             this.PM_time = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ticket_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.movie_image)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,13 +47,14 @@
             this.movie_image.TabIndex = 0;
             this.movie_image.TabStop = false;
             // 
-            // dateTimePicker1
+            // movie_date
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(245, 21);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(284, 27);
-            this.dateTimePicker1.TabIndex = 1;
+            this.movie_date.Location = new System.Drawing.Point(245, 21);
+            this.movie_date.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.movie_date.Name = "movie_date";
+            this.movie_date.Size = new System.Drawing.Size(284, 27);
+            this.movie_date.TabIndex = 1;
+            this.movie_date.ValueChanged += new System.EventHandler(this.movie_date_ValueChanged);
             // 
             // movie_title
             // 
@@ -89,6 +90,7 @@
             this.AM_time.TabIndex = 16;
             this.AM_time.Text = "오전 10시";
             this.AM_time.UseVisualStyleBackColor = true;
+            this.AM_time.CheckedChanged += new System.EventHandler(this.time_CheckedChanged);
             // 
             // PM_time
             // 
@@ -99,18 +101,20 @@
             this.PM_time.TabIndex = 17;
             this.PM_time.Text = "오후 4시";
             this.PM_time.UseVisualStyleBackColor = true;
+            this.PM_time.CheckedChanged += new System.EventHandler(this.time_CheckedChanged);
             // 
-            // button1
+            // ticket_btn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(296, 243);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 38);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "예매하기";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ticket_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ticket_btn.FlatAppearance.BorderSize = 0;
+            this.ticket_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ticket_btn.Location = new System.Drawing.Point(296, 243);
+            this.ticket_btn.Name = "ticket_btn";
+            this.ticket_btn.Size = new System.Drawing.Size(190, 38);
+            this.ticket_btn.TabIndex = 18;
+            this.ticket_btn.Text = "예매하기";
+            this.ticket_btn.UseVisualStyleBackColor = false;
+            this.ticket_btn.Click += new System.EventHandler(this.ticket_btn_Click);
             // 
             // Ticket
             // 
@@ -118,12 +122,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(612, 322);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ticket_btn);
             this.Controls.Add(this.PM_time);
             this.Controls.Add(this.AM_time);
             this.Controls.Add(this.signExit_btn);
             this.Controls.Add(this.movie_title);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.movie_date);
             this.Controls.Add(this.movie_image);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -140,11 +144,11 @@
         #endregion
 
         private System.Windows.Forms.PictureBox movie_image;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker movie_date;
         private System.Windows.Forms.Label movie_title;
         private System.Windows.Forms.Button signExit_btn;
         private System.Windows.Forms.CheckBox AM_time;
         private System.Windows.Forms.CheckBox PM_time;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ticket_btn;
     }
 }

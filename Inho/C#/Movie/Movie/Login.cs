@@ -1,12 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Movie
@@ -36,7 +29,7 @@ namespace Movie
         }
         public Login()
         {
-            connection = new MySqlConnection("Server=localhost;Port=3306;Database=movie;Uid=root;Pwd=0506");
+            connection = new MySqlConnection("Server=localhost;Port=3306;Database=movie;Uid=root;Pwd=1111");
             connection.Open();
             InitializeComponent();
         }
@@ -64,7 +57,7 @@ namespace Movie
                 cmd.Connection = connection;
                 isCon = 1;
             }
-            cmd.CommandText = "SELECT iD,PW,Email FROM movie.userinfo WHERE ID = '" + ID_text.Text + "' AND PW = '" + PW_text.Text + "'";
+            cmd.CommandText = "SELECT iD,PW,E_MAIL FROM movie.userinfo WHERE ID = '" + ID_text.Text + "' AND PW = '" + PW_text.Text + "'";
             rdr = cmd.ExecuteReader();
 
             try
@@ -83,9 +76,9 @@ namespace Movie
                     }
                 }
                 Form1 main = new Form1(islogin1, ID);
-                
+
             }
-            catch (Exception )
+            catch (Exception)
             {
                 MessageBox.Show("에러");
             }

@@ -43,7 +43,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.knivesout = new System.Windows.Forms.PictureBox();
+            this.knivesOut = new System.Windows.Forms.PictureBox();
             this.search = new System.Windows.Forms.PictureBox();
             this.goksung = new System.Windows.Forms.PictureBox();
             this.savaha = new System.Windows.Forms.PictureBox();
@@ -89,7 +89,7 @@
             this.extremejob = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.knivesout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.knivesOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.search)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goksung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.savaha)).BeginInit();
@@ -124,6 +124,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(79, 628);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // ID_text
             // 
@@ -252,16 +253,16 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Thriller / Horror";
             // 
-            // knivesout
+            // knivesOut
             // 
-            this.knivesout.Image = ((System.Drawing.Image)(resources.GetObject("knivesout.Image")));
-            this.knivesout.Location = new System.Drawing.Point(45, 58);
-            this.knivesout.Name = "knivesout";
-            this.knivesout.Size = new System.Drawing.Size(143, 207);
-            this.knivesout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.knivesout.TabIndex = 19;
-            this.knivesout.TabStop = false;
-            this.knivesout.Click += new System.EventHandler(this.pictureBox_click);
+            this.knivesOut.Image = ((System.Drawing.Image)(resources.GetObject("knivesOut.Image")));
+            this.knivesOut.Location = new System.Drawing.Point(45, 58);
+            this.knivesOut.Name = "knivesOut";
+            this.knivesOut.Size = new System.Drawing.Size(143, 207);
+            this.knivesOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.knivesOut.TabIndex = 19;
+            this.knivesOut.TabStop = false;
+            this.knivesOut.Click += new System.EventHandler(this.pictureBox_click);
             // 
             // search
             // 
@@ -519,7 +520,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.knivesout);
+            this.panel2.Controls.Add(this.knivesOut);
             this.panel2.Controls.Add(this.search);
             this.panel2.Controls.Add(this.goksung);
             this.panel2.Location = new System.Drawing.Point(3, 309);
@@ -638,7 +639,6 @@
             this.button9.Size = new System.Drawing.Size(43, 40);
             this.button9.TabIndex = 20;
             this.button9.UseVisualStyleBackColor = true;
-
             // 
             // label15
             // 
@@ -767,7 +767,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.knivesout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.knivesOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.search)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goksung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.savaha)).EndInit();
@@ -806,7 +806,7 @@
         private System.Windows.Forms.PictureBox savaha;
         private System.Windows.Forms.PictureBox goksung;
         private System.Windows.Forms.PictureBox search;
-        private System.Windows.Forms.PictureBox knivesout;
+        private System.Windows.Forms.PictureBox knivesOut;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;

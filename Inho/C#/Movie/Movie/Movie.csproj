@@ -184,6 +184,15 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberVo.cs" />
+    <Compile Include="MovieList.cs" />
+    <Compile Include="Seat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seat.Designer.cs">
+      <DependentUpon>Seat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLCONNECT.cs" />
     <Compile Include="Ticket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,8 +213,13 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ticketing.cs" />
+    <Compile Include="TicketList.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seat.resx">
+      <DependentUpon>Seat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ticket.resx">
       <DependentUpon>Ticket.cs</DependentUpon>
@@ -240,21 +254,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources\darknightRise.jpg" />
-    <EmbeddedResource Include="Properties\Resources\endGame.jpg" />
-    <EmbeddedResource Include="Properties\Resources\Extraction.jpg" />
-    <EmbeddedResource Include="Properties\Resources\extremeJob.jpg" />
-    <EmbeddedResource Include="Properties\Resources\goksung.jpg" />
-    <EmbeddedResource Include="Properties\Resources\kinvesOut.jpg" />
-    <EmbeddedResource Include="Properties\Resources\loveActually.jpg" />
-    <EmbeddedResource Include="Properties\Resources\savaha.jpg" />
-    <EmbeddedResource Include="Properties\Resources\Search.jpg" />
-    <EmbeddedResource Include="Properties\Resources\tenet.jpg" />
-    <EmbeddedResource Include="Properties\Resources\threeIdiot.jpg" />
     <EmbeddedResource Include="Properties\titanic.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources\titanic.jpg" />
+    <Content Include="Properties\darknight.jpg" />
+    <Content Include="Properties\endGame.jpg" />
+    <Content Include="Properties\Extraction.jpg" />
+    <Content Include="Properties\extremeJob.jpg" />
+    <Content Include="Properties\goksung.jpg" />
+    <Content Include="Properties\kinvesOut.jpg" />
+    <Content Include="Properties\loveActually.jpg" />
+    <Content Include="Properties\savaha.jpg" />
+    <Content Include="Properties\Search.jpg" />
+    <Content Include="Properties\tenet.jpg" />
+    <Content Include="Properties\threeIdiot.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

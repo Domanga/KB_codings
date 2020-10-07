@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Movie
 {
@@ -18,19 +11,30 @@ namespace Movie
         Login log = new Login();
         Login.islogin loged = new Login.islogin();
 
+        public MovieList movie;
+        public TicketList ticketlist;
+        private Ticket ticket;
+        public MemberVo member;
+
+        public MySqlConnection connectionForm1;
+        MySqlCommand cmd;
+        MySqlDataReader rdr;
+
         public Form1(int islog1, string ID)
         {
+            movie = new MovieList();
+            ticketlist = new TicketList();
+            member = new MemberVo();
+
             islogin1 = islog1;
             InitializeComponent();
             Initialization();
-            MySqlConnection connection = new MySqlConnection("Server=localhost;Port=3306;Database=movie;Uid=root;Pwd=0506");
-            connection.Open();
+            connectionForm1 = new MySqlConnection("Server=localhost;Port=3306;Database=movie;Uid=root;Pwd=1111");
+            connectionForm1.Open();
             id = ID;
-        }
-       
-        public void Initialization()
-        {
-            ID_text.Text = id+ "님";
+            member.Id = id;
+            ID_text.Text = id + "님";
+
             if (islogin1 == 1)
             {
                 login_btn.Visible = false;
@@ -41,7 +45,21 @@ namespace Movie
                 login_btn.Visible = true;
                 out_btn.Visible = false;
             }
+        }
 
+        public void Initialization()
+        {
+            ID_text.Text = id + "님";
+            if (islogin1 == 1)
+            {
+                login_btn.Visible = false;
+                out_btn.Visible = true;
+            }
+            else
+            {
+                login_btn.Visible = true;
+                out_btn.Visible = false;
+            }
         }
 
         private void login_btn_Click(object sender, EventArgs e)
@@ -83,7 +101,7 @@ namespace Movie
         {
             PictureBox t = sender as PictureBox;
             string s = t.Name;
-            switch(s)
+            switch (s)
             {
                 case "tenet":
                     MessageBox.Show("테넷");
@@ -97,7 +115,7 @@ namespace Movie
                 case "darkknight":
                     MessageBox.Show("다크나이트:라이즈");
                     break;
-                case "knivesout":
+                case "knivesOut":
                     MessageBox.Show("나이브스아웃");
                     break;
                 case "search":
@@ -123,9 +141,17 @@ namespace Movie
                     break;
 
             }
+            movie.Title = s;   // 영화 제목
+            ticketlist.Title = s;
 
-            Ticket ticket = new Ticket();
+            ticket = new Ticket(this, id);           // 티켓폼 이동
             ticket.Show();
+            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
