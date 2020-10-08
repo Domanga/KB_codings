@@ -76,7 +76,7 @@ namespace Movie
                     }
                 }
                 Form1 main = new Form1(islogin1, ID);
-
+                main = (Form1)this.Owner;
             }
             catch (Exception)
             {

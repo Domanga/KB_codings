@@ -60,9 +60,22 @@ namespace Movie
                     MessageBox.Show(piece[i]);
                 }
             }
+            rdr.Close();
+            
+        /*      for (int i = 0; i < piece.Length; i++)
+            {
+                var checkBox = this.Controls.Find(piece[i].ToString(), true).FirstOrDefault() as CheckBox;
+                if (checkBox != null)
+                {
+                    checkBox.Checked = true;
+                    checkBox.Enabled = false;
+                }
 
+               // CheckBox boxes = Controls.Find(piece[i], true).ElementAtOrDefault<Controls>;
+            }
+        */
         }
-
+      
         private void Cus_num_ValueChanged(object sender, EventArgs e)
         {
             cus_Num = Cus_num.Value;
@@ -84,14 +97,6 @@ namespace Movie
         {
             CheckBox list = sender as CheckBox;
 
-            for (int i = 0; i < piece.Length; i++)
-            {
-                if (list.Name == piece[i])
-                {
-                    list.Enabled = false;
-                }
-            }
-
             if (cus_Num > 0)
             {
                 if (count <= cus_Num)
@@ -104,21 +109,17 @@ namespace Movie
                     seat += list.Name +",";
                 }
             }
-
-
         }
 
         private void ticket_btn_Click(object sender, EventArgs e)
         {
-            CheckBox list = sender as CheckBox; 
+            
             ticketlist.Seat = seat;
-            //MySqlConnection connection = new MySqlConnection("Server=localhost;Port=3306;Database=movie;Uid=root;Pwd=1111");
-            //connection.Open();
             string query = "INSERT INTO movie.ticket VALUES('" + id + "', '" + ticketlist.Title + "', '" + ticketlist.Date + "' , '" + ticketlist.Time + "' , '" + ticketlist.Seat + "')";
             try
             {
-                MySqlCommand command = new MySqlCommand(query, connectionSeat);
-                if (command.ExecuteNonQuery() == 1)
+                cmd = new MySqlCommand(query, connectionSeat);
+                if (cmd.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("예매되었습니다..");
                     this.Close();
@@ -128,7 +129,7 @@ namespace Movie
                     MessageBox.Show("버그다");
                 }
             }
-            catch (Exception)
+            catch (Exception )
             {
                 MessageBox.Show("에러");
             }

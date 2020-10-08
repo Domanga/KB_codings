@@ -235,6 +235,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
@@ -264,6 +265,7 @@
     <Content Include="Properties\goksung.jpg" />
     <Content Include="Properties\kinvesOut.jpg" />
     <Content Include="Properties\loveActually.jpg" />
+    <None Include="Properties\refresh.png" />
     <Content Include="Properties\savaha.jpg" />
     <Content Include="Properties\Search.jpg" />
     <Content Include="Properties\tenet.jpg" />

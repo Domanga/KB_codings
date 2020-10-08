@@ -33,15 +33,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ID_text = new System.Windows.Forms.Label();
             this.out_btn = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.reFresh_btn = new System.Windows.Forms.Button();
+            this.myTicket = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.login_btn = new System.Windows.Forms.Button();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.exit_btn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.search_text = new System.Windows.Forms.TextBox();
+            this.search_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.knivesOut = new System.Windows.Forms.PictureBox();
             this.search = new System.Windows.Forms.PictureBox();
@@ -114,8 +114,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.ID_text);
             this.panel1.Controls.Add(this.out_btn);
-            this.panel1.Controls.Add(this.button14);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.reFresh_btn);
+            this.panel1.Controls.Add(this.myTicket);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.login_btn);
@@ -148,26 +148,31 @@
             this.out_btn.Visible = false;
             this.out_btn.Click += new System.EventHandler(this.out_btn_Click);
             // 
-            // button14
+            // reFresh_btn
             // 
-            this.button14.Location = new System.Drawing.Point(4, 201);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 39);
-            this.button14.TabIndex = 3;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.reFresh_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.reFresh_btn.BackgroundImage = global::Movie.Properties.Resources.refresh;
+            this.reFresh_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.reFresh_btn.FlatAppearance.BorderSize = 0;
+            this.reFresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reFresh_btn.Location = new System.Drawing.Point(0, 141);
+            this.reFresh_btn.Name = "reFresh_btn";
+            this.reFresh_btn.Size = new System.Drawing.Size(79, 48);
+            this.reFresh_btn.TabIndex = 3;
+            this.reFresh_btn.UseVisualStyleBackColor = false;
+            this.reFresh_btn.Click += new System.EventHandler(this.reFresh_btn_Click);
             // 
-            // button5
+            // myTicket
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(15, 546);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(40, 40);
-            this.button5.TabIndex = 2;
-            this.button5.UseVisualStyleBackColor = true;
+            this.myTicket.FlatAppearance.BorderSize = 0;
+            this.myTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.myTicket.Image = ((System.Drawing.Image)(resources.GetObject("myTicket.Image")));
+            this.myTicket.Location = new System.Drawing.Point(15, 546);
+            this.myTicket.Name = "myTicket";
+            this.myTicket.Size = new System.Drawing.Size(40, 40);
+            this.myTicket.TabIndex = 2;
+            this.myTicket.UseVisualStyleBackColor = true;
+            this.myTicket.Click += new System.EventHandler(this.myTicket_Click);
             // 
             // pictureBox1
             // 
@@ -222,25 +227,26 @@
             this.exit_btn.UseVisualStyleBackColor = false;
             this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
             // 
-            // textBox1
+            // search_text
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(126, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 31);
-            this.textBox1.TabIndex = 16;
+            this.search_text.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_text.Location = new System.Drawing.Point(126, 18);
+            this.search_text.Name = "search_text";
+            this.search_text.Size = new System.Drawing.Size(171, 31);
+            this.search_text.TabIndex = 16;
             // 
-            // button1
+            // search_btn
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(303, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 31);
-            this.button1.TabIndex = 17;
-            this.button1.UseVisualStyleBackColor = false;
+            this.search_btn.BackColor = System.Drawing.Color.White;
+            this.search_btn.FlatAppearance.BorderSize = 0;
+            this.search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.search_btn.Image = ((System.Drawing.Image)(resources.GetObject("search_btn.Image")));
+            this.search_btn.Location = new System.Drawing.Point(303, 18);
+            this.search_btn.Name = "search_btn";
+            this.search_btn.Size = new System.Drawing.Size(37, 31);
+            this.search_btn.TabIndex = 17;
+            this.search_btn.UseVisualStyleBackColor = false;
+            this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
             // 
             // label1
             // 
@@ -753,8 +759,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(910, 628);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.search_btn);
+            this.Controls.Add(this.search_text);
             this.Controls.Add(this.exit_btn);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -797,7 +803,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button myTicket;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button login_btn;
@@ -808,8 +814,8 @@
         private System.Windows.Forms.PictureBox search;
         private System.Windows.Forms.PictureBox knivesOut;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button search_btn;
+        private System.Windows.Forms.TextBox search_text;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;
@@ -850,7 +856,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button reFresh_btn;
         private System.Windows.Forms.Button out_btn;
         private System.Windows.Forms.Label ID_text;
     }

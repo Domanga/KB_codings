@@ -18,14 +18,11 @@ namespace Movie
         public static string title, id;
 
         public MySqlConnection connectionTicket;
-        MySqlCommand cmd;
-        MySqlDataReader rdr;
-
+     
         public Ticket(Form1 form1, String ID)
         {
             InitializeComponent();
-            Initialization();
-
+            
             this.form1 = form1;
             movie = this.form1.movie;
             ticketlist = this.form1.ticketlist;
@@ -42,11 +39,6 @@ namespace Movie
             movie_title.Text = title;
             movie_date.Value = DateTime.Today;
         }
-
-        private void Initialization()
-        {
-        }
-
 
         private void ticket_btn_Click(object sender, EventArgs e)
         {
@@ -89,7 +81,6 @@ namespace Movie
         {
             this.Close();
         }
-
 
     }
 }
