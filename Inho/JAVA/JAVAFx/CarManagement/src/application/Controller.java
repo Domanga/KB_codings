@@ -45,14 +45,14 @@ public class Controller implements Initializable {
 	ObservableList<String> list = FXCollections.observableArrayList("1", "2", "3", "4");
 
 	Connection conn = null;
-	String dbname = "parking";
+	String dbname = "test1";
 	Statement stmt = null;
 	ResultSet rs = null;
 	String cur_floor, search_floor;
 
 	PreparedStatement pstmt = null;
 
-	String sql_stat = "select model, number, color, date, floor from " + dbname + ".parkingCar order by floor ASC";
+	String sql_stat = "select model, number, color, date, floor from " + dbname + ".parkingcar order by floor ASC";
 	String sql_log = "select * from " + dbname + ".history order by floor ASC";
 	int Charge;
 	
@@ -72,19 +72,19 @@ public class Controller implements Initializable {
 				
 				Random rand = new Random();
 				int random = rand.nextInt(50) + 1;
-				System.out.println(String.valueOf(random));
-				enter_btn.setText(String.valueOf(random));
+//				System.out.println(String.valueOf(random));
+//				enter_btn.setText(String.valueOf(random));
 				
 				String model = i_model.getText();
 				String number = i_number.getText();
 				String color = i_color.getText();
 				cur_floor = floor.getValue();
-				String sql = "insert into " + dbname + ".parkingCar values(?, ?, ?, ?, ?)";
+				String sql = "insert into " + dbname + ".parkingcar values(?, ?, ?, ?, ?)";
 
 				Alert alert = new Alert(AlertType.INFORMATION);
-				alert.setTitle("ÀÔÂ÷");
-				alert.setHeaderText("ÀÔÂ÷¸¦ ½ÇÇàÇÕ´Ï´Ù.");
-				alert.setContentText("½ÇÇàÇÏ½Ã°Ú½À´Ï±î?");
+				alert.setTitle("ì…ì°¨");
+				alert.setHeaderText("ì…ì°¨ë¥¼ ì‹¤ì‹œí•©ë‹ˆë‹¤..");
+				alert.setContentText("ì…ì°¨ë¥¼ ì‹¤ì‹œí•˜ê² ìŠµë‹ˆê¹Œ?");
 				alert.showAndWait().ifPresent(ra -> {
 					if (ra == ButtonType.OK) {
 						try {
@@ -118,17 +118,17 @@ public class Controller implements Initializable {
 				String model1 = o_model.getText();
 				String number1 = o_number.getText();
 
-				String sql1 = "delete from " + dbname + ".parkingCar where model = ? and number = ? ";
+				String sql1 = "delete from " + dbname + ".parkingcar where model = ? and number = ? ";
 
 				Alert alert = new Alert(AlertType.INFORMATION);
-				alert.setTitle("ÃâÂ÷");
-				alert.setHeaderText("ÃâÂ÷¸¦ ½ÇÇàÇÕ´Ï´Ù.");
-				alert.setContentText("½ÇÇàÇÏ½Ã°Ú½À´Ï±î?");
+				alert.setTitle("ì¶œì°¨");
+				alert.setHeaderText("ì¶œì°¨ë¥¼ ì‹¤í–‰í•©ë‹ˆë‹¤..");
+				alert.setContentText("ì¶œì°¨ë¥¼ ì‹¤í–‰í•˜ê² ìŠµë‹ˆê¹Œ?");
 				alert.showAndWait().ifPresent(ra -> {
 					if (ra == ButtonType.OK) {
 						try {
 							String sql_temp = "select model, number, color, date, floor from " + dbname
-									+ ".parkingCar where model = '" + model1 + "' order by floor ASC";
+									+ ".parkingcar where model = '" + model1 + "' order by floor ASC";
 							pstmt = conn.prepareStatement(sql_temp);
 							rs = pstmt.executeQuery();
 
@@ -177,22 +177,22 @@ public class Controller implements Initializable {
 			@Override
 			public void handle(ActionEvent arg0) {
 				Alert alert = new Alert(AlertType.INFORMATION);
-				alert.setTitle("DB¿¬°á");
-				alert.setHeaderText("DB ¿¬°áÀ» ½ÇÇàÇÕ´Ï´Ù.");
-				alert.setContentText("¿¬°áÇÏ½Ã°Ú½À´Ï±î?");
+				alert.setTitle("DBì—°ê²°");
+				alert.setHeaderText("DB ë¥¼ ì—°ê²°í•©ë‹ˆë‹¤..");
+				alert.setContentText("DBë¥¼ ì—°ê²°í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 				alert.showAndWait().ifPresent(ra -> {
 					if (ra == ButtonType.OK) {
 						try {
-//							Class.forName("com.mysql.cj.jdbc.Driver");
-//							String url = "jdbc:mysql://localhost/" + dbname
-//									+ "?serverTimezone=UTC&allowPublicKeyRetrieval=true" + "&useSSL=false";
-//							conn = DriverManager.getConnection(url, "root", "0506");
-//							System.out.println("ÁÖÂ÷½Ã½ºÅÛ ¿¬µ¿ ½ÃÀÛ");
-//
-//							stmt = conn.createStatement();
+							Class.forName("com.mysql.cj.jdbc.Driver");
+							String url = "jdbc:mysql://localhost/" + dbname
+									+ "?serverTimezone=UTC&allowPublicKeyRetrieval=true" + "&useSSL=false";
+							conn = DriverManager.getConnection(url, "test", "1111");
+							System.out.println("DB ì—°ê²° ì„±ê³µ");
+
+							stmt = conn.createStatement();
 							
-//							DAO Car = new DAO();
-//							Car.add(dto);
+							DAO Car = new DAO();
+							Car.add(dto);
 
 							printCarStatement(sql_stat, parking_stat);
 							printCarLog(sql_log, history);
@@ -211,28 +211,28 @@ public class Controller implements Initializable {
 				String sfloor = s_floor.getValue();
 
 				Alert alert = new Alert(AlertType.INFORMATION);
-				alert.setTitle("Â÷·®Á¶È¸");
-				alert.setHeaderText("¸ğµ¨¸í" + smodel + "Â÷·®¹øÈ£" + snumber + "Ãş" + sfloor);
-				alert.setContentText("°Ë»öÇÏ½Ã°Ú½À´Ï±î?");
+				alert.setTitle("ì¡°íšŒí•˜ê¸°");
+				alert.setHeaderText("ì°¨ëŸ‰ëª¨ë¸" + smodel + "ì°¨ëŸ‰ë²ˆí˜¸" + snumber + "ì¸µìˆ˜" + sfloor);
+				alert.setContentText("ì¡°íšŒí•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 				alert.showAndWait().ifPresent(ra -> {
 					if (ra == ButtonType.OK) {
 						try {
 							if (!smodel.equals("")) {
 								String sql3 = "select model, number, color, date, floor from " + dbname
-										+ ".parkingCar where model = " + "'" + smodel + "'" + " order by floor ASC";
+										+ ".parkingcar where model = " + "'" + smodel + "'" + " order by floor ASC";
 								rs = stmt.executeQuery(sql3);
 
 								printCarStatement(sql3, parking_search);
 
 							} else if (!snumber.equals("")) {
 								String sql3 = "select model, number, color, date, floor from " + dbname
-										+ ".parkingCar where number = " + "'" + snumber + "'" + " order by floor ASC";
+										+ ".parkingcar where number = " + "'" + snumber + "'" + " order by floor ASC";
 								rs = stmt.executeQuery(sql3);
 
 								printCarStatement(sql3, parking_search);
 							} else if (!sfloor.equals("")) {
 								String sql3 = "select model, number, color, date, floor from " + dbname
-										+ ".parkingCar where floor = " + "'" + sfloor + "'" + " order by floor ASC";
+										+ ".parkingcar where floor = " + "'" + sfloor + "'" + " order by floor ASC";
 
 								printCarStatement(sql3, parking_search);
 							}
@@ -255,7 +255,7 @@ public class Controller implements Initializable {
 						+ rs.getString(4) + "  \t" + rs.getString(5) + "\n";
 			}
 			area.setText(
-					"Â÷·®¸ğµ¨  \tÂ÷·®¹øÈ£  \tÂ÷·®»ö»ó  \tÀÔÂ÷½Ã°£  \t                       Ãş\n -------------------------------------------------\n"
+					"ì°¨ëŸ‰ëª¨ë¸  \tì°¨ëŸ‰ë²ˆí˜¸  \tì°¨ëŸ‰ìƒ‰ìƒ \tì…ì°¨ë‚ ì§œ  \t                      ì¸µìˆ˜\n -------------------------------------------------\n"
 							+ statements);
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -271,7 +271,7 @@ public class Controller implements Initializable {
 						+ rs.getString(4) + "  \t" + rs.getString(5) + "  \t" + rs.getString(6) + "\n";
 			}
 			area.setText(
-					"Â÷·®¸ğµ¨  \tÂ÷·®¹øÈ£  \tÀÔÂ÷½Ã°£  			  \tÃâÂ÷½Ã°£  \t	              Ãş\t¿ä±İ \n -----------------------------------------------------------------------\n"
+					"ì°¨ë‘ëª¨ë¸  \tì°¨ëŸ‰ë²ˆí˜¸  \tì…ì°¨ì‹œê°„  			  \tì¶œì°¨ì‹œê°„  \t	              ì¸µìˆ˜\tìš”ê¸ˆ \n -----------------------------------------------------------------------\n"
 							+ statements);
 		} catch (SQLException e) {
 			e.printStackTrace();

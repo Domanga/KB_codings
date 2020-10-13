@@ -22,7 +22,7 @@ public class DAO {
 			String url = "jdbc:mysql://localhost/" + dbname + "?serverTimezone=UTC&allowPublicKeyRetrieval=true"
 					+ "&useSSL=false";
 			conn = DriverManager.getConnection(url, "root", "0506");
-			System.out.println("ÁÖÂ÷½Ã½ºÅÛ ¿¬µ¿ ½ÃÀÛ");
+			System.out.println("ì—°ê²°ë˜ì—ˆìŠµë‹ˆë‹¤.");
 
 			stmt = conn.createStatement();
 

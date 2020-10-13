@@ -52,7 +52,7 @@ public class Controller implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 
-		timeLine = new Timeline(); // timeLine °´Ã¼ ÃÊ±âÈ­
+		timeLine = new Timeline(); // timeLine ï¿½ï¿½Ã¼ ï¿½Ê±ï¿½È­
 		timeLine.setCycleCount(Timeline.INDEFINITE);
 		timeLine.play();
 
@@ -128,13 +128,13 @@ public class Controller implements Initializable {
 			count++;
 
 		} else {
-			System.out.println("´Ù½Ã °í¸£¼À" + String.valueOf(count));
+			System.out.println("ë•¡ ! " + String.valueOf(count));
 		}
 		if (count == 51) {
 			timeLine.stop();
 			 Alert alert = new Alert(AlertType.INFORMATION);
-             alert.setTitle("Å¬¸®¾î!");
-             alert.setContentText("ÃàÇÏÇÕ´Ï´Ù.");
+             alert.setTitle("í´ë¦¬ì–´!");
+             alert.setContentText("ì¶•í•˜ë“œë¦½ë‹ˆë‹¤!.");
              alert.setHeaderText(null);
              alert.show();
 		}

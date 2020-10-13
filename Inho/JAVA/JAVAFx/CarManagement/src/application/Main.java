@@ -13,7 +13,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("CarOverView.fxml"));
-			primaryStage.setTitle("ÁÖÂ÷ °ü¸® ÇÁ·Î±×·¥");
+			primaryStage.setTitle("ì£¼ì°¨ê´€ë¦¬ ì‹œìŠ¤í…œ");
 			primaryStage.setScene(new Scene(root));
 			primaryStage.show();
 		} catch (Exception e) {
