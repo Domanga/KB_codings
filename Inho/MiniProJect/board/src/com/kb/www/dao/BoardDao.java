@@ -257,6 +257,30 @@ public class BoardDao {
 		return vo;
 	}
 
+	public MemberVo getLeaveMember(String id) {
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		MemberVo vo = null;
+		try {
+			pstmt = con.prepareStatement("select sq, id, pw, email from member where binary(id)=? and leave_fl=true");
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				vo = new MemberVo();
+				vo.setSq(rs.getInt("sq"));
+				vo.setId(rs.getString("id"));
+				vo.setPwd(rs.getString("pw"));
+				vo.setEmail(rs.getString("email"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		return vo;
+	}
+
 	public int updateLoginState(MemberVo vo) {
 		PreparedStatement pstmt = null;
 		int count = 0;
@@ -335,11 +359,28 @@ public class BoardDao {
 		return count;
 	}
 
+	public int updateLeaveMember(MemberVo vo) {
+		PreparedStatement pstmt = null;
+		int count = 0;
+		try {
+			pstmt = con.prepareStatement("update member set pw=?, email=?, leave_fl=false where id=?");
+			pstmt.setString(1, vo.getPwd());
+			pstmt.setString(2, vo.getEmail());
+			pstmt.setString(3, vo.getId());
+			count = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		return count;
+	}
+
 	public int leaveMember(MemberVo vo) {
 		PreparedStatement pstmt = null;
 		int count = 0;
 		try {
-			pstmt = con.prepareStatement("update member set leave_fl=? where id=?");
+			pstmt = con.prepareStatement("update member set leave_fl=? ,lgn_st=false where id=?");
 			pstmt.setBoolean(1, true);
 			pstmt.setString(2, vo.getId());
 			count = pstmt.executeUpdate();

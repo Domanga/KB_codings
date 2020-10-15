@@ -3,7 +3,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <%
 	MemberVo vo = (MemberVo) request.getAttribute("vo");
-
 %>
 <html>
 <head>
@@ -57,11 +56,27 @@
 		}
 
 	}
-	
+
 	function GoBack() {
 		location.href = "/";
 	}
 </script>
+<style type="text/css">
+body {
+	margin: 0;
+	opacity: 0.9;
+	position: relative;
+	background-image: url('images/green_back.jpg') !important;
+	width: 1920px;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px 10px 10px 10px;
+	z-index: 1;
+	opacity: 0.8;
+	opacity: 0.9;
+}
+</style>
 </head>
 <body>
 	<div class="main">
@@ -70,8 +85,10 @@
 				<div class="signup-content">
 					<div class="signup-form">
 						<h2 class="form-title">Update Info</h2>
-						<form action="/memberUpdateProc.do" onsubmit="return validateCheck()" method="post" class="register-form"
-							onsubmit="return validateCheck()" id="register-form">
+						<form action="/memberUpdateProc.do"
+							onsubmit="return validateCheck()" method="post"
+							class="register-form" onsubmit="return validateCheck()"
+							id="register-form">
 							<div class="form-group">
 								<label for="name"><i class="fa fa-id-card"
 									aria-hidden="true"></i></label> <input type="text" name="id" id="id"
@@ -95,8 +112,9 @@
 							</div>
 							<div class="form-group form-button">
 								<input type="submit" name="signup" id="signup"
-									class="form-submit" value="Update"> 
-									<input type="button" class="form-submit" value="Back" onclick="GoBack()">
+									class="form-submit" value="Update"> <input
+									type="button" class="form-submit" value="Back"
+									onclick="GoBack()">
 							</div>
 						</form>
 					</div>

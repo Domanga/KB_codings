@@ -72,9 +72,26 @@
 	}
 </script>
 
+<style type="text/css">
+body {
+	margin: 0;
+	opacity: 0.9;
+	position: relative;
+	background-image: url('images/green_back.jpg') !important;
+	width: 1920px;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px 10px 10px 10px;
+	z-index: 1;
+	opacity: 0.8;
+	opacity: 0.9;
+}
+</style>
 
 </head>
 <body>
+
 	<div class="main">
 
 		<section class="signup">
@@ -82,8 +99,8 @@
 				<div class="signup-content">
 					<div class="signup-form">
 						<h2 class="form-title">Sign up</h2>
-						<form action="/joinProc.do" method="post" class="register-form" onsubmit="return validateCheck()"
-							id="register-form">
+						<form action="/joinProc.do" method="post" class="register-form"
+							onsubmit="return validateCheck()" id="register-form">
 							<div class="form-group">
 								<label for="name"><i class="fa fa-id-card"
 									aria-hidden="true"></i></label> <input type="text" name="id" id="id"
@@ -91,8 +108,8 @@
 							</div>
 							<div class="form-group">
 								<label for="pass"><i class="fa fa-key"
-									aria-hidden="true"></i></label> <input type="password" name="pwd" id="pwd"
-									placeholder="Your Password">
+									aria-hidden="true"></i></label> <input type="password" name="pwd"
+									id="pwd" placeholder="Your Password">
 							</div>
 							<div class="form-group">
 								<label for="re-pass"><i class="fa fa-key"
@@ -114,8 +131,8 @@
 							</div>
 							<div class="form-group form-button">
 								<input type="submit" name="signup" id="signup"
-									class="form-submit" value="Register"> 
-									<input type="button" class="form-submit" value="Back"
+									class="form-submit" value="Register"> <input
+									type="button" class="form-submit" value="Back"
 									onclick="GoBack()">
 							</div>
 						</form>
@@ -124,7 +141,7 @@
 						<figure>
 							<img src="images/signup-image.jpg" alt="sing up image">
 						</figure>
-						<a href="#" class="signup-image-link">I am already member</a>
+						<a href="/login.do" class="signup-image-link">이미 회원이신가요?</a>
 					</div>
 				</div>
 			</div>

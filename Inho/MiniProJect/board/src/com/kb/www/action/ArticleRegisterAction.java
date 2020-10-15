@@ -29,14 +29,14 @@ public class ArticleRegisterAction implements Action {
         }
 
         String subject = request.getParameter("subject");
-        String content = request.getParameter("contents");
+        String content = request.getParameter("content");
         if (subject == null || subject.equals("")
                 || !RegExp.checkString(ARTICLE_SUBJECT, subject)
                 || content == null || content.equals("")
                 || !RegExp.checkString(ARTICLE_CONTENT, content)) {
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter out = response.getWriter();
-            out.println("<script>alert('잘못된 접근입니다.');location.href='/';</script>");
+            out.println("<script>alert('잘못된 접근입니다.1');location.href='/';</script>");
             out.close();
             return null;
         }

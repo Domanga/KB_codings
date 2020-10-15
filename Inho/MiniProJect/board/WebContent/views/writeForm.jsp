@@ -36,41 +36,67 @@
 </script>
 <style>
 body {
-	padding: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+th, tr, thead {
+	color: white;
+	font-weight: bold;
+}
+
+a {
+	color: white;
+	font-size: 24px;
+}
+
+.main_content {
+	opacity: 0.8;
+	position: relative;
+	background-image: url('images/grey_back.jpg');
+	width: 1920px;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px 10px 10px 10px;
+	z-index: 1;
 }
 </style>
 </head>
 <body>
-	<div class="row">
-		<div class="col-md-2">
-			<div class="panel panel-info">
-				<div class="panel-heading">
-					<h3 class="panel-title">인호네 게시판</h3>
-					<i class="fa fa-bell" aria-hidden="true"></i> <br /> <br /> <br />
-				</div>
-				<!-- 사이드바 메뉴목록1 -->
-				<div class="list-group">
-					<div class="input-group"></div>
-					<button class="btn btn-dark" onclick="location.href='/list.do?pn=1'">뒤로가기</button>
-					<button class="btn btn-dark" onclick="location.href='/'">메인으로</button>
+	<div class="main_content">
+		<div class="row" style="z-index: 2; padding: 10px">
+			<div class="col-md-2">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">인호네 게시판</h3>
+						<i class="fa fa-bell" aria-hidden="true"></i> <br /> <br /> <br />
+					</div>
+					<!-- 사이드바 메뉴목록1 -->
+					<div class="list-group">
+						<div class="input-group"></div>
+						<button class="btn btn-dark"
+							onclick="location.href='/list.do?pn=1'">뒤로가기</button>
+						<button class="btn btn-dark" onclick="location.href='/'">메인으로</button>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="container col-md-9">
-			<form action="/register.do" method="post"
-				onsubmit="return checkData()">
-				<div class="form-group">
-					<label for="">제목</label> <input type="text" class="form-control"
-						name="subject" id="subject" maxlength="100">
-				</div>
-				<div class="form-group">
-					<label for="">내용</label>
-					<textarea name="content" class="form-control" id="content"
-						cols="30" rows="10"></textarea>
-					<input type="submit" class="btn btn-dark" value="등록">
-				</div>
-			</form>
+			<div class="container col-md-9">
+				<form action="/register.do" method="post"
+					onsubmit="return checkData()">
+					<div class="form-group">
+						<label for="">제목</label> <input type="text" class="form-control"
+							name="subject" id="subject" maxlength="100">
+					</div>
+					<div class="form-group">
+						<label for="">내용</label>
+						<textarea name="content" class="form-control" id="content"
+							cols="30" rows="10"></textarea>
+						<input type="submit" class="btn btn-dark" value="등록">
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 </body>

@@ -8201,7 +8201,7 @@ button.bg-dark:focus {
 
 .mt-3,
 .my-3 {
-  margin-top: 1rem !important;
+  margin-top: 0rem !important;
 }
 
 .mr-3,
@@ -8211,7 +8211,7 @@ button.bg-dark:focus {
 
 .mb-3,
 .my-3 {
-  margin-bottom: 1rem !important;
+  margin-bottom: 0rem !important;
 }
 
 .ml-3,
@@ -8340,7 +8340,7 @@ button.bg-dark:focus {
 }
 
 .p-3 {
-  padding: 1rem !important;
+  padding: 0rem !important;
 }
 
 .pt-3,

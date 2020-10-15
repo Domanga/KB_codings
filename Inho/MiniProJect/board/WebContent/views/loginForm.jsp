@@ -60,7 +60,21 @@
 		location.href = "/";
 	}
 </script>
-
+<style>
+body {
+	margin: 0;
+	opacity: 0.8;
+	position: relative;
+	background-image: url('images/orange_back.jpg') !important;
+	width: 1920px;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px 10px 10px 10px;
+	z-index: 1;
+	opacity: 0.8;
+}
+</style>
 </head>
 <body>
 	<div class="limiter">
@@ -69,17 +83,17 @@
 				<form class="login100-form validate-form" action="/loginProc.do"
 					method="post" onsubmit="return validateCheck()">
 					<span class="login100-form-title p-b-26"> Welcome </span> <span
-						class="login100-form-title p-b-48"> <i
-						class="fa fa-bell" aria-hidden="true"></i>
+						class="login100-form-title p-b-48"> <i class="fa fa-bell"
+						aria-hidden="true"></i>
 					</span>
-					<div class="wrap-input100 validate-input"
-						data-validate="Enter id">
+					<div class="wrap-input100 validate-input" data-validate="Enter id">
 						<input class="input100" type="text" name="id"> <span
 							class="focus-input100" data-placeholder="Id"></span>
 					</div>
 					<div class="wrap-input100 validate-input"
 						data-validate="Enter password">
-						<span class="btn-show-pass"> <i class="fa fa-eye" aria-hidden="true"></i>
+						<span class="btn-show-pass"> <i class="fa fa-eye"
+							aria-hidden="true"></i>
 						</span> <input class="input100" type="password" name="pwd"> <span
 							class="focus-input100" data-placeholder="Password"></span>
 					</div>
@@ -92,13 +106,14 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<input class="login100-form-btn" type="button" onClick="GoBack()" value="Back" />
+							<input class="login100-form-btn" type="button" onClick="GoBack()"
+								value="Back" />
 						</div>
 					</div>
 
 					<div class="text-center p-t-115">
-						<span class="txt1"> Don’t have an account? </span> <a class="txt2"
-							href="/join.do"> Sign Up </a>
+						<span class="txt1"> 아직 회원이 아니신가요? </span> <a class="txt2"
+							href="/join.do"> 회원가입 </a>
 					</div>
 				</form>
 			</div>

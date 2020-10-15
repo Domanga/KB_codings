@@ -26,69 +26,97 @@ String nowPage = request.getParameter("pn");
 	crossorigin="anonymous">
 
 <style type="text/css">
+
 body {
-	padding: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+th, tr, thead {
+	color: white;
+	font-weight: bold;
+}
+
+a {
+	color: white;
+	font-size: 24px;
+}
+
+.main_content {
+	opacity: 0.8;
+	position: relative;
+	background-image: url('images/grey_back.jpg');
+	width: 1920px;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 10px 10px 10px 10px;
+	z-index: 1;
 }
 </style>
 
 </head>
 <body>
+	<div class="main_content">
+		<div class="row" style="z-index: 2; padding: 10px">
+			<div class="col-md-2">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">인호네 게시판</h3>
+						<br /> <br /> <br />
+					</div>
+					<!-- 사이드바 메뉴목록1 -->
+					<div class="list-group">
+						<div class="input-group"></div>
 
-	<div class="row">
-		<div class="col-md-2">
-			<div class="panel panel-info">
-				<div class="panel-heading">
-					<h3 class="panel-title">인호네 게시판</h3>
-					<br /> <br /> <br />
-				</div>
-				<!-- 사이드바 메뉴목록1 -->
-				<div class="list-group">
-					<div class="input-group"></div>
+						<button class="btn btn-dark"
+							onclick="location.href='/list.do?pn=<%=nowPage%>'">목록으로</button>
 
-					<button class="btn btn-dark" onclick="location.href='/list.do?pn=<%=nowPage%>'">목록으로</button>
+						<%
+							if (id != null && id.equals(vo.getId())) {
+						%>
+						<button class="btn btn-dark"
+							onclick="location.href='/update.do?pn=<%=nowPage%>&num=<%=vo.getNum()%>'">수정</button>
+						<button class="btn btn-dark"
+							onclick="location.href='/delete.do?pn=<%=nowPage%>&num=<%=vo.getNum()%>'">삭제</button>
+						<%
+							}
+						%>
+					</div>
 				</div>
 			</div>
+
+			<div class="container col-md-9">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th scope="col" class="text-center">글 번호</th>
+							<th scope="col" class="text-center">글 제목</th>
+							<th scope="col" class="text-center">글 내용</th>
+							<th scope="col" class="text-center">조회수</th>
+							<th scope="col" class="text-center">글쓴이</th>
+							<th scope="col" class="text-center">작성일자</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td style="width: 10%" scope="col" class="text-center"><%=vo.getNum()%>
+							</td>
+							<td style="width: 10%" scope="col" class="text-center"><%=vo.getSubject()%>
+							</td>
+							<td style="width: 30%" scope="col" class="text-center"><%=vo.getContent()%>
+							</td>
+							<td style="width: 10%" scope="col" class="text-center"><%=vo.getHit()%>
+							</td>
+							<td style="width: 10%" scope="col" class="text-center"><%=vo.getId()%></td>
+							<td style="width: 40%" scope="col" class="text-center"><%=vo.getWdate()%>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
-
-		<div class="container col-md-9">
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th scope="col" class="text-center">글 번호</th>
-						<th scope="col" class="text-center">글 제목</th>
-						<th scope="col" class="text-center">조회수</th>
-						<th scope="col" class="text-center">글쓴이</th>
-						<th scope="col" class="text-center">작성일자</th>
-					</tr>
-				</thead>
-				<tbody>
-
-					<tr>
-						<td style="width: 10%" scope="col" class="text-center"><%=vo.getNum()%>
-						</td>
-						<td style="width: 30%" scope="col" class="text-center"><%=vo.getSubject()%>
-						</td>
-						<td style="width: 10%" scope="col" class="text-center"><%=vo.getHit()%>
-						</td>
-						<td style="width: 20%" scope="col" class="text-center"><%=vo.getId()%></td>
-						<td style="width: 40%" scope="col" class="text-center"><%=vo.getWdate()%>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		
-		<%
-			if (id != null && id.equals(vo.getId())) {
-		%>
-		<button
-			onclick="location.href='/update.do?pn=<%=nowPage%>&num=<%=vo.getNum()%>'">수정</button>
-		<button
-			onclick="location.href='/delete.do?pn=<%=nowPage%>&num=<%=vo.getNum()%>'">삭제</button>
-		<%
-			}
-		%>
-	
+	</div>
 </body>
 </html>

@@ -20,6 +20,7 @@ public class LeaveAction implements Action {
             throws Exception {
         LoginManager lm = LoginManager.getInstance();
         String id = lm.getMemberId(request.getSession());
+      
         if(id == null) {
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter out = response.getWriter();
@@ -46,7 +47,7 @@ public class LeaveAction implements Action {
         }
 
         ActionForward forward = new ActionForward();
-        forward.setPath("/");
+        forward.setPath("/logout.do");
         forward.setRedirect(true);
         return forward;
     }
